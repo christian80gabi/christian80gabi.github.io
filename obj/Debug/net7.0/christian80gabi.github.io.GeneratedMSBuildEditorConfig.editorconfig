@@ -1,12 +1,12 @@
 is_global = true
 build_property.TargetFramework = net7.0
 build_property.TargetPlatformMinVersion = 
-build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = 
 build_property.ProjectTypeGuids = 
-build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = false
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
-build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = browser
 build_property.RootNamespace = christian80gabi.github.io
 build_property.RootNamespace = christian80gabi.github.io
 build_property.ProjectDir = C:\Users\chris\Documents\workspaces\GitHub\christian80gabi.github.io\
@@ -47,11 +47,3 @@ build_metadata.AdditionalFiles.CssScope = b-dyv2atds62
 [C:/Users/chris/Documents/workspaces/GitHub/christian80gabi.github.io/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-tlm1t3t6wx
-
-[C:/Users/chris/Documents/workspaces/GitHub/christian80gabi.github.io/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/chris/Documents/workspaces/GitHub/christian80gabi.github.io/Pages/_Host.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 

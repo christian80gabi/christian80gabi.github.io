@@ -1,8 +1,20 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\christian80gabi.github.io.bundle.scp.css",
-      "PackagePath": "staticwebassets\\christian80gabi.github.io.bundle.scp.css"
+      "Id": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\obj\\Debug\\net7.0\\build-gz\\X2hpVxB0.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\obj\\Debug\\net7.0\\scopedcss\\bundle\\christian80gabi.github.io.styles.css",
+      "PackagePath": "staticwebassets\\christian80gabi.github.io.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
       "Id": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
@@ -49,12 +61,20 @@
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
       "Id": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.christian80gabi.github.io.props",
