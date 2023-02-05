@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+7eVlBH8Q5yA0fFHY0TxG40X4/yEirbrmfK8li/rqV2IvV6cam3kTpUuT+DWojmjNOpnE1caVxHXkTRGyzSAsg==",
+  "dgSpecHash": "QQfEPHhx/mS1DYpo93OP4qN9Vd0zuaTtGjCxEOntyqdprDVCpxxadxZYYfN/jCSwi1PxDNl1OCLYDXNB2bAXVA==",
   "success": true,
   "projectFilePath": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\christian80gabi.github.io.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "C:\\Users\\chris\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\microsoft.jsinterop\\7.0.2\\microsoft.jsinterop.7.0.2.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.2\\microsoft.jsinterop.webassembly.7.0.2.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\publishspaforgithubpages.build\\2.0.2\\publishspaforgithubpages.build.2.0.2.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",

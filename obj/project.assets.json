@@ -419,6 +419,12 @@
           }
         }
       },
+      "PublishSPAforGitHubPages.Build/2.0.2": {
+        "type": "package",
+        "build": {
+          "build/PublishSPAforGitHubPages.Build.targets": {}
+        }
+      },
       "System.IO.Pipelines/7.0.0": {
         "type": "package",
         "compile": {
@@ -893,6 +899,12 @@
           "lib/net7.0/Microsoft.JSInterop.WebAssembly.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "PublishSPAforGitHubPages.Build/2.0.2": {
+        "type": "package",
+        "build": {
+          "build/PublishSPAforGitHubPages.Build.targets": {}
         }
       },
       "System.IO.Pipelines/7.0.0": {
@@ -1664,6 +1676,32 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
+    "PublishSPAforGitHubPages.Build/2.0.2": {
+      "sha512": "eAlkngAyeBqQR3U8v3kxmnPZk7FgJ3tBtuP2T9D1PQpHPGLNGeGbsyZfeidcaLvd0THGwOiO2T19+Xh1LP1ImA==",
+      "type": "package",
+      "path": "publishspaforgithubpages.build/2.0.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/PublishSPAforGitHubPages.Build.targets",
+        "bundle/scripts/brotliloader.js",
+        "bundle/scripts/brotliloader.min.js",
+        "bundle/scripts/decode.js",
+        "bundle/scripts/decode.min.js",
+        "nupkg-icon.png",
+        "publishspaforgithubpages.build.2.0.2.nupkg.sha512",
+        "publishspaforgithubpages.build.nuspec",
+        "tools/Brotli.Core.dll",
+        "tools/PublishSPAforGitHubPages.Build.dll",
+        "tools/runtimes/linux/native/brolib_x64.so",
+        "tools/runtimes/linux/native/brolib_x86.so",
+        "tools/runtimes/osx/native/brolib_x64.dylib",
+        "tools/runtimes/win/native/brolib_x64.dll",
+        "tools/runtimes/win/native/brolib_x86.dll"
+      ]
+    },
     "System.IO.Pipelines/7.0.0": {
       "sha512": "jRn6JYnNPW6xgQazROBLSfpdoczRw694vO5kKvMcNnpXuolEixUyw6IBuBs2Y2mlSX/LdLvyyWmfXhaI3ND1Yg==",
       "type": "package",
@@ -1797,7 +1835,8 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.2",
-      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.2"
+      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.2",
+      "PublishSPAforGitHubPages.Build >= 2.0.2"
     ]
   },
   "packageFolders": {
@@ -1853,6 +1892,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.2, )"
+          },
+          "PublishSPAforGitHubPages.Build": {
+            "target": "Package",
+            "version": "[2.0.2, )"
           }
         },
         "imports": [
