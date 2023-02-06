@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages
+      - main
 
 jobs:
   deploy:
@@ -31,4 +31,3 @@ jobs:
           BRANCH: gh-pages
           publish_dir: public/wwwroot
           force_orphan: true
-          # Add
