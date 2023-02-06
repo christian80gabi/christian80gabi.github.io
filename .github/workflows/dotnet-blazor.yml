@@ -31,3 +31,4 @@ jobs:
           BRANCH: gh-pages
           publish_dir: public/wwwroot
           force_orphan: true
+          # Add
