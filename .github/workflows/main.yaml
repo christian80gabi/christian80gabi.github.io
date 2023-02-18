@@ -20,16 +20,21 @@ jobs:
 
     - name: Build and publish
       run: |
+        dotnet publish christian80gabi.github.io.csproj -c Release -o publish
         # dotnet build -c Release
         # dotnet publish -c Release -o publish -p GHPages=true
-        dotnet publish christian80gabi.github.io.csproj -p:GHPages=true -o:public -c:Release
+        # dotnet publish christian80gabi.github.io.csproj -p:GHPages=true -o:public -c:Release
+    
+    - name: copy index.html to 404.html
+      run: cp publish/wwwroot/index.html publish/wwwroot/404.html
+    
+    - name: Add .nojekyll file
+      run: touch release/wwwroot/.nojekyll
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: wwwroot
         ssh-key: ${{ secrets.DEPLOY_KEY }}
-      env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: publish
