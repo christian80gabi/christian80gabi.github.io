@@ -1,1 +1,0 @@
-C:\Users\chris\Documents\workspaces\GitHub\christian80gabi.github.io\bin\Release\net7.0\publish\web.config
