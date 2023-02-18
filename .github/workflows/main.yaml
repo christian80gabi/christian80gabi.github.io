@@ -34,10 +34,11 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         ssh-key: ${{ secrets.DEPLOY_KEY }}
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: publish/wwwroot
-        CLEAN: true
+        token: ${{ secrets.ACCESS_TOKEN }}
+        branch: gh-pages
+        commit-message: 'Publishing Blazor WebAssembly to GitHub Pages'
+        folder: publish/wwwroot
+        clean: true
         
 # dotnet publish christian80gabi.github.io.csproj -c Release -o publish --nologo
 # dotnet publish christian80gabi.github.io.csproj -o:public -c:Release
