@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>christian80gabi</title>
+    <title>CHRISTIAN80GABI</title>
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
     <link href="christian80gabi.github.io.styles.css" rel="stylesheet" />
 </head>
 
@@ -26,7 +26,7 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-    
+
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
         (function (l) {
@@ -47,8 +47,21 @@
         }(window.location))
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
-    
+
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="_framework/blazor.webassembly.js"></script>
+
+    <script>
+        // Init ToolTip
+        // ------------------------------------------------------------------------------
+        let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        // const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        // const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
 </body>
 
 </html>

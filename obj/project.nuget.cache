@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8YzcFEntiPZ0kDM/jKmVDJirE3BN6n/S/K54cZ2LrE0PPPg00pc9qVU9C1pTtLO3PvbIVHQlgMzUXO6LsLrDtQ==",
+  "dgSpecHash": "ZN7/SS9ck6skxaALOUVuuXh35r8qyuk6EKKoufKPDftjfDm0ugJ1NJLDULXOurbZPsDk6intI6xl476AYF7v4w==",
   "success": true,
   "projectFilePath": "C:\\Users\\chris\\Documents\\workspaces\\GitHub\\christian80gabi.github.io\\christian80gabi.github.io.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\chris\\.nuget\\packages\\bootstrap\\5.2.3\\bootstrap.5.2.3.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.2\\microsoft.aspnetcore.authorization.7.0.2.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.2\\microsoft.aspnetcore.components.7.0.2.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.2\\microsoft.aspnetcore.components.analyzers.7.0.2.nupkg.sha512",
