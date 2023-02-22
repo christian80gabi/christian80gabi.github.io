@@ -32,8 +32,9 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        ssh-key: ${{ secrets.DEPLOY_KEY }}
-        token: ${{ secrets.ACCESS_TOKEN }}
+        # ssh-key: ${{ secrets.DEPLOY_KEY }}
+        # token: ${{ secrets.ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ github.token }}
         branch: gh-pages
         commit-message: "Publishing Blazor WebAssembly to GitHub Pages"
         git-config-name: "Christian Gabi"
