@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 7.0.x
+        dotnet-version: 7.x
 
     - name: Build and publish
       run: |
@@ -33,10 +33,10 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        # ssh-key: ${{ secrets.DEPLOY_KEY }}
+        ssh-key: ${{ secrets.DEPLOY_KEY }}
         token: ${{ secrets.ACCESS_TOKEN }}
         branch: gh-pages
-        commit-message: 'Publishing Blazor WebAssembly to GitHub Pages'
+        # commit-message: 'Publishing Blazor WebAssembly to GitHub Pages'
         folder: publish/wwwroot
         clean: true
         
