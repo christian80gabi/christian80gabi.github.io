@@ -31,7 +31,7 @@ jobs:
       run: touch publish/wwwroot/.nojekyll
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
+      uses: JamesIves/github-pages-deploy-action@v3
       with:
         ssh-key: ${{ secrets.DEPLOY_KEY }}
         token: ${{ secrets.ACCESS_TOKEN }}
