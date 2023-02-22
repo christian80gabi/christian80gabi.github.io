@@ -23,7 +23,6 @@ jobs:
         dotnet build christian80gabi.github.io.csproj -c Release
         dotnet publish christian80gabi.github.io.csproj -c Release -o publish
        
-    
     - name: copy index.html to 404.html
       run: cp publish/wwwroot/index.html publish/wwwroot/404.html
     
