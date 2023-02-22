@@ -35,10 +35,13 @@ jobs:
         ssh-key: ${{ secrets.DEPLOY_KEY }}
         token: ${{ secrets.ACCESS_TOKEN }}
         branch: gh-pages
-        commit-message: 'Publishing Blazor WebAssembly to GitHub Pages'
+        commit-message: "Publishing Blazor WebAssembly to GitHub Pages"
+        git-config-name: "Christian Gabi"
+        git-config-email: "christian-gabriel.nana@outlook.com"
         folder: publish/wwwroot
         clean: true
         force: true
+        
         
 # dotnet publish christian80gabi.github.io.csproj -c Release -o publish --nologo
 # dotnet publish christian80gabi.github.io.csproj -o:public -c:Release
