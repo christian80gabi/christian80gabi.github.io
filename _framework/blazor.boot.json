@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "christian80gabi.github.io.dll": "sha256-HVlAN8G2hu9\/KZllh\/qgSVbrKq40jFQkJlfR2tsY5u8=",
+      "christian80gabi.github.io.dll": "sha256-3iaJf9vCUss1FobCmu9MBL1oVEy2qou5mMkWDOsh2A4=",
       "Microsoft.AspNetCore.Components.dll": "sha256-T5GBiqdOXVOst5UZgsViquZp5ZEgKyEPAWnRgBYxL7Y=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-CqjgLzzZwv7F4s+S4K1bhK5MxHLAwzuuHeDyIpP2bQg=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-2Jg3mQhCSyqkofbgXHMRw0whL7fAl07+VKYd0lApk7I=",
