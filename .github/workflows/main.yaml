@@ -34,7 +34,7 @@ jobs:
       with:
         # ssh-key: ${{ secrets.DEPLOY_KEY }}
         # token: ${{ secrets.ACCESS_TOKEN }}
-        GITHUB_TOKEN: ${{ github.token }}
+        token: ${{ github.token }}
         branch: gh-pages
         commit-message: "Publishing Blazor WebAssembly to GitHub Pages"
         git-config-name: "Christian Gabi"
