@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2023-04-22",
+    "title": "PiWord",
+    "status": "Done",
+    "scope": "Personal",
+    "source": "https://github.com/christian80gabi/PiWord",
+    "summary": "A Cross-platfom Word Discovery application using .NET Multi-platform App UI (.NET MAUI)."
+  },
+  {
+    "date": "2023-02-06",
+    "title": "Personal Portfollio",
+    "status": "Done",
+    "scope": "Personal",
+    "source": "https://christian80gabi.github.io/",
+    "summary": "Build my personal portfollio using Blazor and GitHub Pages."
+  },
+  {
+    "date": "2023-02-01",
+    "title": "Action",
+    "status": "New",
+    "scope": "Personal",
+    "source": "",
+    "summary": "A Cross-platfom To-Do application using .NET Multi-platform App UI (.NET MAUI)."
+  },
+  {
+    "date": "2022-04-11",
+    "title": "Django Fullcalendar",
+    "status": "In Progress",
+    "scope": "Open Source",
+    "source": "https://github.com/christian80gabi/fullcalendar_django",
+    "summary": "An Agenda Django Web App using FullcalendarJS Library."
+  },
+  {
+    "date": "2021-04-01",
+    "title": "HR Suite",
+    "status": "In Progress",
+    "scope": "Contract",
+    "source": "",
+    "summary": "A HRM (Human Resources Management System) by IDM Systems."
+  }
+]
