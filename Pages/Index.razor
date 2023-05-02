@@ -1,24 +1,51 @@
 ﻿@page "/"
+@using System.Globalization
+@using Microsoft.JSInterop
+@inject IJSRuntime JS
 
 <PageTitle>Index</PageTitle>
 
-<div class="container text-center">
-    <h2 class="display-1 text-success fw-bolder">Christian G. NANA</h2>
-    <h3 class="lead fw-bolder">Software engineer & Graphic Designer</h3>
-    <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatibus placeat architecto iusto
-        laboriosam voluptates harum repellendus ad debitis ipsa alias similique culpa impedit, optio quidem cumque.
-        Doloremque, ea accusantium!
-    </p>
+<div class="container">
+    <div class="mb-3 lh-1">
+        <div class="display-1 fw-bolder mb-0" style="color: #192c86;">Christian G. NANA</div>
+        <div class="hstack gap-3">
+            <div class="fs-1" style="color: #6f2eea;">-</div>
+            <small class="text-muted">christian80gabi</small>
+        </div>
+    </div>
 
-    <div class="bg-success text-dark bg-opacity-25 p-2 rounded-5">
+    <div>
+        <h3 class="typewriter">Information Systems Engineer, Web Developer and Graphic Designer</h3>
+        <div align="justify" class="font-monospace mb-4">
+            A passionate technology enthusiast with a keen interest in staying up-to-date with the latest developments
+            in the field & a strong believer in continuous learning.
+        </div>
+    </div>
+
+    <div class="text-dark bg-opacity-25 p-2 rounded-5 text-center" style="background-color: #6f2eea">
 
         <figure class="figure" style="max-height: fit-content;">
-            <img src="images/avatar.png" class="figure-img img-fluid rounded" alt="Avatar" />
+            <img src="images/avatar.png" class="figure-img img-fluid rounded" alt="Avatar" style="max-width: 100%; object-fit: cover; height: calc(100vh - 500px);"/>
             <figcaption class="figure-caption"></figcaption>
         </figure>
 
     </div>
-
 </div>
-<SocialMedia Title="christian80gabi © 2023" />
+
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+    <SocialMedia />
+</footer>
+
+@code {
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var words = new string[] { "Information Systems Engineer", "Web Developer", "Graphic Designer" };
+
+        if (firstRender)
+        {
+            var module = await JS.InvokeAsync<IJSObjectReference>("import", "./Pages/Index.razor.js");
+            await module.InvokeVoidAsync("typewriter");
+        }
+    }
+}

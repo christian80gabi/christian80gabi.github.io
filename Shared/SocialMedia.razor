@@ -1,23 +1,76 @@
-﻿<div class="alert alert-light mt-4 d-flex justify-content-evenly">
-    <a href="https://linkedin.com/christian-gabriel-nana/" target="_blank" data-bs-toggle="tooltip"
-        data-bs-placement="top" data-bs-title="LinkedIn">
+﻿@inject HttpClient Http
+
+<div class="d-flex justify-content-evenly">
+    <a href="@LinkedIn" target="_blank" data-bs-toggle="tooltip"
+       data-bs-placement="top" data-bs-title="LinkedIn">
         <img src="icons/linkedin.svg" alt="Linkedin" height="25" />
     </a>
-    <a href="https://behance.net/christiangabi/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-        data-bs-title="Behance">
+    <a href="@Behance" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+       data-bs-title="Behance">
         <img src="icons/behance.svg" alt="Behance" height="25" />
     </a>
-    <a href="https://github.com/christian80gabi/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-        data-bs-title="GitHub">
+    <a href="@GitHub" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+       data-bs-title="GitHub">
         <img src="icons/github.svg" alt="GitHub" height="25" />
     </a>
 </div>
-<div class="text-center text-muted">
-    <strong>@Title</strong>
+
+<div class="text-center text-muted mt-2">
+    <strong>@Title</strong> 
 </div>
 
 @code {
     // Demonstrates how a parent component can supply parameters
+    private static DateTime currentYear = DateTime.Now;
+
+    public string? Behance { get; set; }
+    public string? LinkedIn { get; set; }
+    public string? GitHub { get; set; }
+
+
     [Parameter]
-    public string? Title { get; set; }
+    public string? Title { get; set; } = $"© christian80gabi {currentYear.Year}";
+
+
+    private SocialMediaLink[]? _links;
+    private Dictionary<string, string>? _socialMedias;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _links = await Http.GetFromJsonAsync<SocialMediaLink[]>("data/links.json");
+
+        if (_links != null)
+        {
+            _socialMedias = new Dictionary<string, string>();
+            foreach (var link in _links)
+            {
+                try
+                {
+                    _socialMedias.Add(link.Title, link.Link);
+                }
+                catch (ArgumentException)
+                {
+                    Console.WriteLine($"An element with Key = \"{link.Title}\" already exists.");
+                }
+            }
+
+            try
+            {
+                Behance = _socialMedias["Behance"];
+                LinkedIn = _socialMedias["LinkedIn"];
+                GitHub = _socialMedias["GitHub"];
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+    }
+
+    public class SocialMediaLink
+    {
+        public string Title { get; set; } = string.Empty;
+        public string Link { get; set; } = string.Empty;
+    }
+
 }

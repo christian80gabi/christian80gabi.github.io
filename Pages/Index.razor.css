@@ -1,0 +1,32 @@
+﻿@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #780c93
+    }
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.typewriter {
+    overflow: hidden; /* Ensures the text is not visible outside of the container */
+    border-right: .15em solid #780c93; /* Creates the typewriter cursor effect */
+    white-space: nowrap; /* Prevents the text from wrapping onto a new line */
+    letter-spacing: .15em; /* Adds spacing between the characters */
+    animation: typing 15.5s steps(40, end), blink-caret .75s step-end infinite;
+}
