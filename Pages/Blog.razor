@@ -1,0 +1,31 @@
+@page "/blog"
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+
+<PageTitle>Blog</PageTitle>
+
+<main>
+    <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+        <span class="wrap"></span>
+    </a>
+</main>
+
+@code {
+    private IJSInProcessObjectReference? module;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await JS.InvokeAsync<IJSInProcessObjectReference>("import",  "./Pages/Blog.razor.js");
+        }
+    }
+
+    async ValueTask IAsyncDisposable.DisposeAsync()
+    {
+        if (module is not null)
+        {
+            await module.DisposeAsync();
+        }
+    }
+}
