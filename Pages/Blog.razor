@@ -1,31 +1,28 @@
 @page "/blog"
-@implements IAsyncDisposable
-@inject IJSRuntime JS
+@using Markdig
+@inject NavigationManager NavigationManager
 
-<PageTitle>Blog</PageTitle>
+<h1>Blog Posts</h1>
 
-<main>
-    <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
-        <span class="wrap"></span>
-    </a>
-</main>
+@foreach (var post in Posts)
+{
+    <h2 @onclick="@(() => NavigateToPost(post))">@post.Title</h2>
+}
 
 @code {
-    private IJSInProcessObjectReference? module;
+    private List<Post> Posts { get; set; } = GetPosts();
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    static private List<Post> GetPosts()
     {
-        if (firstRender)
+        return new List<Post>
         {
-            module = await JS.InvokeAsync<IJSInProcessObjectReference>("import",  "./Pages/Blog.razor.js");
-        }
+            new Post { Id = 1, Title = "Post 1", MarkdownFile = "post1.md" },
+            new Post { Id = 2, Title = "Post 2", MarkdownFile = "post2.md" },
+        };
     }
 
-    async ValueTask IAsyncDisposable.DisposeAsync()
+    private void NavigateToPost(Post post)
     {
-        if (module is not null)
-        {
-            await module.DisposeAsync();
-        }
+        NavigationManager.NavigateTo($"/post/{post.Id}");
     }
 }

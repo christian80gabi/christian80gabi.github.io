@@ -1,0 +1,24 @@
+@page "/post/{postId:int}"
+@using Microsoft.AspNetCore.Components.Rendering
+@using Markdig
+
+<div>
+    @if (Post != null)
+    {
+        @RenderMarkdown(Post.MarkdownContent)
+    }
+    else
+    {
+        <p>Loading post...</p> }
+</div>
+
+@code {
+    [Parameter]
+    public Post? Post { get; set; }
+
+    private RenderFragment RenderMarkdown(string markdownContent)
+    {
+        var parsed = Markdown.Parse(markdownContent);
+        return builder => builder.AddContent(0, parsed);
+    }
+}

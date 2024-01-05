@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3n+ndGRlySkwy/As5CNxnGm0NyAuc9vWPjcj+S/gL9YDj7LieqyGkg1ER2KiiisFo1FQqTxiMyIu1SII9v3fzA==",
+  "dgSpecHash": "RVG8sU5NeCW7PU/fz0zfMmw+zc0X3yG9dbdjv/bHHKXpWlBwZe9Uh2bxmulPjpdnF00UrolXia7a44pbTgjpgA==",
   "success": true,
   "projectFilePath": "/home/chris/Documents/codespace/christian80gabi.github.io/christian80gabi.github.io.csproj",
   "expectedPackageFiles": [
     "/home/chris/.nuget/packages/bootstrap/5.2.3/bootstrap.5.2.3.nupkg.sha512",
+    "/home/chris/.nuget/packages/markdig/0.34.0/markdig.0.34.0.nupkg.sha512",
     "/home/chris/.nuget/packages/microsoft.aspnetcore.authorization/8.0.0/microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",
     "/home/chris/.nuget/packages/microsoft.aspnetcore.components/8.0.0/microsoft.aspnetcore.components.8.0.0.nupkg.sha512",
     "/home/chris/.nuget/packages/microsoft.aspnetcore.components.analyzers/8.0.0/microsoft.aspnetcore.components.analyzers.8.0.0.nupkg.sha512",

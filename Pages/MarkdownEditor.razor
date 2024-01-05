@@ -1,0 +1,37 @@
+@page "/editor"
+@using Markdig
+
+<PageTitle>Editor</PageTitle>
+
+<div class="row">
+    <div class="col-6">
+        <textarea @bind-value="@MarkdownText" @bind-value:event="oninput" rows="20" cols="80">
+        </textarea>
+    </div>
+    <div class="col-6">
+        <textarea @bind-value="@Html" @bind-value:event="oninput" rows="20" cols="80">
+        </textarea>
+    </div>
+</div>
+
+
+@code {
+    private string markdown { get; set; } = "";
+
+    public string MarkdownText
+    {
+        get => markdown;
+        set
+        {
+            if (value != markdown)
+            {
+                markdown = value;
+                OnMarkdownChanged();
+            }
+        }
+    }
+
+    public string Html { get; set; } = "";
+
+    private void OnMarkdownChanged() => Html = Markdown.ToHtml(markdown);
+}
