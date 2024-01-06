@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Linux: The Underdog OS Leaping into the Spotlight (and Your Wallet)",
+    "date": "2024-01-05",
+    "markdownFile": "data/posts/2024.01.04.01.md",
+    "markdownContent": "Empty"
+  },
+  {
+    "id": 2,
+    "title": "Ditch the Manual: Installing Arch Linux the \"Easy\" Way with archinstall",
+    "date": "2024-01-05",
+    "markdownFile": "data/posts/2024.01.04.02.md",
+    "markdownContent": "Empty"
+  }
+]

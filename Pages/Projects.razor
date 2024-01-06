@@ -1,4 +1,5 @@
 ﻿@page "/projects"
+@using christian80gabi.github.io.Models
 @inject HttpClient Http
 
 <PageTitle>Projects</PageTitle>
@@ -7,7 +8,7 @@
 
 <p>This a list of few project I'm <code>working on</code> or <code>did</code>. I am always open to new challenges and opportunities or just for a check-in. So, don't worry to reach out!</p>
 
-@if (projects == null)
+@if (_projects == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -15,7 +16,7 @@ else
 {
 
     <div class="row mb-2">
-        @foreach (var project in projects)
+        @foreach (var project in _projects)
         {
             <div class="col-md-6">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -26,7 +27,7 @@ else
                         <p class="card-text mb-auto">@project.Summary</p>
                         @if (!string.IsNullOrEmpty(project.Source))
                         {
-                            <a href="@project.Source" class="stretched-link">Go Check</a>
+                            <a href="@project.Source" class="stretched-link">View</a>
                         }
                     </div>
                 </div>
@@ -49,7 +50,7 @@ else
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                @foreach (var project in projects)
+                @foreach (var project in _projects)
                 {
                     <tr>
                         <td class="font-monospace">@project.Date.ToShortDateString()</td>
@@ -81,20 +82,10 @@ else
 </footer>
 
 @code {
-    private Project[]? projects;
+    private List<Project>? _projects;
 
     protected override async Task OnInitializedAsync()
     {
-        projects = await Http.GetFromJsonAsync<Project[]>("data/projects.json");
-    }
-
-    public class Project
-    {
-        public DateOnly Date { get; set; }
-        public string Title { get; set; } = string.Empty;
-        public string Status { get; set; } = "New";
-        public string? Scope { get; set; }
-        public string? Source { get; set; }
-        public string? Summary { get; set; }
+        _projects = await Http.GetFromJsonAsync<List<Project>>("data/projects.json");
     }
 }

@@ -1,7 +1,5 @@
 ﻿@page "/"
 @using System.Globalization
-@using Microsoft.JSInterop
-@inject IJSRuntime JS
 
 <PageTitle>Index</PageTitle>
 
@@ -27,7 +25,7 @@
             </span>
         </h3>
         <br>
-        <div align="justify" class="font-monospace mb-4">
+        <div class="font-monospace mb-4">
             A passionate technology enthusiast with a keen interest in staying up-to-date with the latest developments
             in the field & a strong believer in continuous learning.
         </div>
@@ -47,17 +45,3 @@
 <footer class="footer mt-auto py-3 bg-body-tertiary">
     <SocialMedia />
 </footer>
-
-@* @code {
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        var words = new string[] { "Information Systems Engineer", "Web Developer", "Graphic Designer" };
-
-        if (firstRender)
-        {
-            var module = await JS.InvokeAsync<IJSObjectReference>("import", "./Pages/Index.razor.js");
-            await module.InvokeVoidAsync("typewriter");
-        }
-    }
-} *@

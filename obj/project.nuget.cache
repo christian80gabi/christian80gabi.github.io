@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RVG8sU5NeCW7PU/fz0zfMmw+zc0X3yG9dbdjv/bHHKXpWlBwZe9Uh2bxmulPjpdnF00UrolXia7a44pbTgjpgA==",
+  "dgSpecHash": "wBdv1xias8DwT8hSmLnAQNOISX8jxRRa9xSYrT1y8vNGx1k2ToUnxhf7bFq7bIIeVuUPzquNCU1Hi7kJJd0JAQ==",
   "success": true,
   "projectFilePath": "/home/chris/Documents/codespace/christian80gabi.github.io/christian80gabi.github.io.csproj",
   "expectedPackageFiles": [
@@ -34,8 +34,7 @@
     "/home/chris/.nuget/packages/microsoft.net.sdk.webassembly.pack/8.0.0/microsoft.net.sdk.webassembly.pack.8.0.0.nupkg.sha512",
     "/home/chris/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
     "/home/chris/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
-    "/home/chris/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
-    "/home/chris/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.0/microsoft.netcore.app.runtime.mono.browser-wasm.8.0.0.nupkg.sha512"
+    "/home/chris/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,24 +1,55 @@
 @page "/blog"
-@using Markdig
+@using christian80gabi.github.io.Models
+@inject HttpClient Http
 @inject NavigationManager NavigationManager
 
-<h1>Blog Posts</h1>
+<h1 class="mb-3">Blog Posts</h1>
 
-@foreach (var post in Posts)
+@if (_posts == null)
 {
-    <h2 @onclick="@(() => NavigateToPost(post))">@post.Title</h2>
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="row mb-2">
+        @foreach (var post in _posts)
+        {
+            <div class="col-md-6" @onclick="@(() => NavigateToPost(post))">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h3 class="mb-0">@post.Title</h3>
+                        <em class="mb-1 text-body-secondary">@post.Date.ToLongDateString()</em>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 }
 
-@code {
-    private List<Post> Posts { get; set; } = GetPosts();
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+    <SocialMedia />
+</footer>
 
-    static private List<Post> GetPosts()
+
+@code {
+    private List<Post>? _posts = Post.Posts;
+
+    protected override async Task OnInitializedAsync()
     {
-        return new List<Post>
+        _posts = await Http.GetFromJsonAsync<List<Post>>("data/posts.json");
+        Post.Posts = _posts ?? Post.Posts;
+        
+        foreach (var post in Post.Posts)
         {
-            new Post { Id = 1, Title = "Post 1", MarkdownFile = "post1.md" },
-            new Post { Id = 2, Title = "Post 2", MarkdownFile = "post2.md" },
-        };
+            try
+            {
+                post.MarkdownContent = await Http.GetStringAsync(post.MarkdownFile);
+            }
+            catch (Exception)
+            {
+                // ignored
+            }
+        }
     }
 
     private void NavigateToPost(Post post)
