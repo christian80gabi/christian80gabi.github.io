@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
@@ -9,8 +9,38 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.2.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.2" PrivateAssets="all" />
+    <PackageReference Include="Markdig" Version="0.34.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\img\Debian_logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\Archlinux_Logo_Black.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\Archlinux_Logo_Dark.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\Archlinux_Logo_Light.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\Debian_Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\Debian_Logo_With_Debian.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\Fedora_logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\Inkscape_Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\LibreOffice_Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\OpenSUSE_Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\OpenSUSE_Tumbleweed_Green_Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\Slackware_logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\posts\resources\svg\Visual_Studio_Code_Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\img\Debian_logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\Archlinux_Logo_Black.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\Archlinux_Logo_Dark.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\Archlinux_Logo_Light.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\Debian_Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\Debian_Logo_With_Debian.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\Fedora_logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\Inkscape_Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\LibreOffice_Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\OpenSUSE_Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\OpenSUSE_Tumbleweed_Green_Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\Slackware_logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\data\resources\svg\Visual_Studio_Code_Logo.svg" />
   </ItemGroup>
 
 </Project>

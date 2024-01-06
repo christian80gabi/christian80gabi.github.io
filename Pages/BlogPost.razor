@@ -1,0 +1,42 @@
+@page "/post/{postId:int}"
+@using Markdig
+@using christian80gabi.github.io.Models
+
+<div>
+    @if (PostId != null && Post != null)
+    {
+        @RenderMarkdown(Post.MarkdownContent)
+    }
+    else
+    {
+        <p>Loading post...</p> 
+    }
+</div>
+
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+    <SocialMedia />
+</footer>
+
+@code {
+    [Parameter]
+    public int? PostId { get; set; }
+    private static Post? Post { get; set; }
+    private List<Post> Posts { get; set; } = Post.Posts;
+    private string? Html { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (PostId == null) return;
+        foreach (var post in Posts.Where(post => post.Id == PostId))
+        {
+            Post = post;
+        }
+    }
+
+    private RenderFragment RenderMarkdown(string markdownContent)
+    {
+        var parsed = Markdown.Parse(markdownContent);
+        Html = parsed.ToHtml();
+        return builder => builder.AddContent(0, new MarkupString(Html));
+    }
+}

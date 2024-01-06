@@ -1,4 +1,5 @@
-﻿@inject HttpClient Http
+﻿@using christian80gabi.github.io.Models
+@inject HttpClient Http
 @inherits LayoutComponentBase
 
 <div class="page">
@@ -55,12 +56,12 @@
     public string? Instagram { get; set; }
     public string? Facebook { get; set; }
 
-    private SocialMedia.SocialMediaLink[]? _links;
+    private SocialMediaLink[]? _links;
     private Dictionary<string, string>? _socialMedias;
 
     protected override async Task OnInitializedAsync()
     {
-        _links = await Http.GetFromJsonAsync<SocialMedia.SocialMediaLink[]>("data/links.json");
+        _links = await Http.GetFromJsonAsync<SocialMediaLink[]>("data/links.json");
 
         if (_links != null)
         {

@@ -1,0 +1,59 @@
+@page "/blog"
+@using christian80gabi.github.io.Models
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h1 class="mb-3">Blog Posts</h1>
+
+@if (_posts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="row mb-2">
+        @foreach (var post in _posts)
+        {
+            <div class="col-md-6" @onclick="@(() => NavigateToPost(post))">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h3 class="mb-0">@post.Title</h3>
+                        <em class="mb-1 text-body-secondary">@post.Date.ToLongDateString()</em>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+    <SocialMedia />
+</footer>
+
+
+@code {
+    private List<Post>? _posts = Post.Posts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _posts = await Http.GetFromJsonAsync<List<Post>>("data/posts.json");
+        Post.Posts = _posts ?? Post.Posts;
+        
+        foreach (var post in Post.Posts)
+        {
+            try
+            {
+                post.MarkdownContent = await Http.GetStringAsync(post.MarkdownFile);
+            }
+            catch (Exception)
+            {
+                // ignored
+            }
+        }
+    }
+
+    private void NavigateToPost(Post post)
+    {
+        NavigationManager.NavigateTo($"/post/{post.Id}");
+    }
+}
