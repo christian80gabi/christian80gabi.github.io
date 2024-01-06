@@ -1,4 +1,101 @@
 /* /Pages/Index.razor.rz.scp.css */
+body[b-ue9n9anwxg],
+html[b-ue9n9anwxg] {
+    height: 100dvh;
+    margin: 0;
+}
+
+.type[b-ue9n9anwxg] {
+    display: inline-block;
+}
+
+.type>span[b-ue9n9anwxg] {
+    display: grid;
+    overflow: hidden;
+    height: 1.2em;
+}
+
+.type span span[b-ue9n9anwxg] {
+    width: 0%;
+    max-width: max-content;
+    overflow: hidden;
+    height: inherit;
+    word-break: break-all;
+    animation:
+        c-b-ue9n9anwxg 0.5s infinite steps(1),
+        t-b-ue9n9anwxg 2s linear infinite alternate,
+        m-b-ue9n9anwxg 16s steps(4) infinite;
+}
+
+.type span span[b-ue9n9anwxg]:before {
+    content: " ";
+    display: inline-block;
+}
+
+@keyframes t-b-ue9n9anwxg {
+
+    90%,
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes c-b-ue9n9anwxg {
+
+    0%,
+    100% {
+        box-shadow: 5px 0 0 #0000
+    }
+
+    50% {
+        box-shadow: 5px 0 0 #780c93
+    }
+}
+
+@keyframes m-b-ue9n9anwxg {
+    100% {
+        transform: translateY(-400%)
+    }
+}
+
+.typewriter[b-ue9n9anwxg] {
+    /* font-size: 2.5rem; */
+    overflow: hidden;
+    /* Ensures the text is not visible outside of the container */
+    border-right: .15em solid #780c93;
+    /* Creates the typewriter cursor effect */
+    white-space: nowrap;
+    /* Prevents the text from wrapping onto a new line */
+    letter-spacing: .15em;
+    /* Adds spacing between the characters */
+    width: 0;
+    animation:
+        typing-b-ue9n9anwxg 3s steps(25, end) forwards;
+    /* animation: typing 15.5s steps(40, end), blink-caret .75s step-end infinite; */
+}
+
+.typewriter2[b-ue9n9anwxg] {
+    /* font-size: 2.5rem;  */
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    width: 0;
+    animation:
+        typing-b-ue9n9anwxg 3s steps(25, end) forwards;
+    animation-delay: 3s;
+}
+
+.typewriter3[b-ue9n9anwxg] {
+    /* font-size: 2.5rem;  */
+    overflow: hidden;
+    border-right: .15em solid greenyellow;
+    white-space: nowrap;
+    width: 0;
+    animation:
+        typing-b-ue9n9anwxg 3s steps(25, end) forwards;
+    animation-delay: 6s;
+}
+
 @keyframes typing-b-ue9n9anwxg {
     from {
         width: 0
@@ -9,27 +106,14 @@
     }
 }
 
-@keyframes blink-caret-b-ue9n9anwxg {
-    from, to {
+@keyframes blink-b-ue9n9anwxg {
+    from {
         border-color: transparent
     }
 
-    50% {
-        border-color: #780c93
+    to {
+        border-color: #780c93;
     }
-}
-
-body[b-ue9n9anwxg], html[b-ue9n9anwxg] {
-    height: 100%;
-    margin: 0;
-}
-
-.typewriter[b-ue9n9anwxg] {
-    overflow: hidden; /* Ensures the text is not visible outside of the container */
-    border-right: .15em solid #780c93; /* Creates the typewriter cursor effect */
-    white-space: nowrap; /* Prevents the text from wrapping onto a new line */
-    letter-spacing: .15em; /* Adds spacing between the characters */
-    animation: typing-b-ue9n9anwxg 15.5s steps(40, end), blink-caret-b-ue9n9anwxg .75s step-end infinite;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-lvwv6vdbmn] {
