@@ -7,6 +7,8 @@ public class Post
     public DateOnly Date { get; set; }
     public string MarkdownFile { get; set; } = string.Empty;
     public string MarkdownContent { get; set; } = "Error 404";
+    public List<String> Tags { get; set; } = ["Other"];
+    public string Cover { get; set; } = string.Empty;
 
     private const string Content = "**Error 404** No Content found! [blog](blog)";
     public static List<Post> Posts { get; set; } = GetPosts();
