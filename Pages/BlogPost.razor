@@ -2,7 +2,7 @@
 @using Markdig
 @using christian80gabi.github.io.Models
 
-<div>
+<div class="container">
     @if (PostId != null && Post != null)
     {
         @RenderMarkdown(Post.MarkdownContent)

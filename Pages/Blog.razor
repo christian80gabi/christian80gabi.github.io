@@ -11,14 +11,18 @@
 }
 else
 {
-    <div class="row mb-2">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach (var post in _posts)
         {
-            <div class="col-md-6" @onclick="@(() => NavigateToPost(post))">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <h3 class="mb-0">@post.Title</h3>
-                        <em class="mb-1 text-body-secondary">@post.Date.ToLongDateString()</em>
+            <div class="col">
+                <div class="card h-100" @onclick="@(() => NavigateToPost(post))">
+                    <img src="@post.Cover" class="card-img-top m-1" alt="Post-Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@post.Title</h5>
+                        <p class="card-text">@foreach(var tag in @post.Tags) { <span class="badge text-bg-light m-2"><code>@tag</code></span> }</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary fst-italic">@post.Date.ToLongDateString()</small>
                     </div>
                 </div>
             </div>

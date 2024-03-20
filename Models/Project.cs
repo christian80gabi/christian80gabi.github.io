@@ -8,4 +8,6 @@ public class Project
     public string? Scope { get; set; }
     public string? Source { get; set; }
     public string? Summary { get; set; }
+    public List<String> Tags { get; set; } = ["Other"];
+    public string Cover { get; set; } = string.Empty;
 }
