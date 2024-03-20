@@ -3,9 +3,11 @@
     "date": "2023-04-22",
     "title": "PiWord",
     "status": "Done",
-    "scope": "Personal",
+    "scope": "Open Source",
     "source": "https://github.com/christian80gabi/PiWord",
-    "summary": "A Cross-platform Word Discovery application using .NET Multi-platform App UI (.NET MAUI)."
+    "summary": "A Cross-platform Word Discovery application using .NET Multi-platform App UI (.NET MAUI).",
+    "tags": ["Cross-platform", "Mobile", "C#", ".NET MAUI", ".NET", "Github", "Git"],
+    "cover": "assets/svg/undraw_mobile_apps.svg"
   },
   {
     "date": "2023-02-06",
@@ -13,36 +15,46 @@
     "status": "In Progress",
     "scope": "Personal",
     "source": "https://christian80gabi.github.io/",
-    "summary": "Build my personal portfolio using Blazor and GitHub Pages."
+    "summary": "Build my personal portfolio using Blazor and GitHub Pages.",
+    "tags": ["Web", "Blazor", "C#", ".NET", "Github", "Git"],
+    "cover": "assets/svg/undraw_portfolio_website.svg"
   },
   {
     "title": "Action",
     "status": "New",
-    "scope": "Personal",
+    "scope": "Open Source",
     "source": "",
-    "summary": "A Cross-platform To-Do application using .NET Multi-platform App UI (.NET MAUI)."
+    "summary": "A Cross-platform To-Do application using .NET Multi-platform App UI (.NET MAUI).",
+    "tags": ["Cross-platform", "Mobile", "C#", ".NET MAUI", ".NET", "Github", "Git"],
+    "cover": "assets/svg/undraw_chore_list.svg"
   },
   {
     "date": "2022-04-11",
-    "title": "Django Fullcalendar",
+    "title": "Django FullCalendar",
     "status": "In Progress",
     "scope": "Open Source",
     "source": "https://github.com/christian80gabi/fullcalendar_django",
-    "summary": "A Django Web App using FullcalendarJS Library."
+    "summary": "A Django Web App using FullcalendarJS Library.",
+    "tags": ["Web", "Django", "Python", "FullCalendar JS Library"],
+    "cover": "assets/svg/undraw_calendar.svg"
   },
   {
     "date": "2021-04-01",
     "title": "HR Suite",
     "status": "In Progress",
     "scope": "Contract",
-    "source": "",
-    "summary": "A HRM (Human Resources Management System) by IDM Systems, Tunis, Tunisia."
+    "source": "https://idm-sys.com",
+    "summary": "A HRM (Human Resources Management System) by IDM Systems, Tunis, Tunisia.",
+    "tags": ["Web", "Django", "Python", "PostgreSQL", "Azure DevOps", "Git"],
+    "cover": "assets/svg/undraw_web_developer.svg"
   },
   {
     "title": "Other",
     "status": "In Progress",
     "scope": "Multiple",
     "source": "https://github.com/christian80gabi?tab=repositories",
-    "summary": "Check out."
+    "summary": "",
+    "tags": ["Java", "C#", ".NET", "Shell", "linux", "Spring Boot", "React", "Angular", "Github", "Git"],
+    "cover": "assets/svg/undraw_more.svg"
   }
 ]
