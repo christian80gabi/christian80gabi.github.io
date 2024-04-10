@@ -1,28 +1,25 @@
 ﻿@using christian80gabi.github.io.Models
 @inject HttpClient Http
 
-<div class="d-flex justify-content-evenly mt-5">
-    <a href="@LinkedIn" target="_blank" data-bs-toggle="tooltip"
-       data-bs-placement="top" data-bs-title="LinkedIn">
-        <img src="icons/linkedin.svg" alt="Linkedin" height="25" />
-    </a>
-    <a href="@Behance" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-       data-bs-title="Behance">
-        <img src="icons/behance.svg" alt="Behance" height="25" />
-    </a>
-    <a href="@GitHub" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-       data-bs-title="GitHub">
-        <img src="icons/github.svg" alt="GitHub" height="25" />
-    </a>
-</div>
 
-<div class="text-center text-muted py-3">
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a> <strong>@Title</strong> 
-</div>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" alt="Creative Commons License" style="border-width:0" height="24" /></a> 
+        </a>
+        <span class="mb-3 ms-2 mb-md-0 text-body-secondary">@Title</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-body-secondary" href="@LinkedIn" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="LinkedIn"><img src="icons/linkedin.svg" alt="Linkedin" height="24" /></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="@GitHub" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="GitHub"><img src="icons/github.svg" alt="GitHub" height="24" /></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="@Behance" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Behance"><img src="icons/behance.svg" alt="Behance" height="24" /></a></li>
+    </ul>
+</footer>
 
 @code {
     // Demonstrates how a parent component can supply parameters
-    private static DateTime currentYear = DateTime.Now;
+    private static DateTime _currentYear = DateTime.Now;
 
     private string? Behance { get; set; }
     private string? LinkedIn { get; set; }
@@ -30,7 +27,7 @@
 
 
     [Parameter]
-    public string? Title { get; set; } = $"© christian80gabi {currentYear.Year}";
+    public string? Title { get; set; } = $"© {_currentYear.Year} christian80gabi";
 
 
     private SocialMediaLink[]? _links;
