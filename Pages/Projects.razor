@@ -10,7 +10,7 @@
 
 @if (_projects == null)
 {
-    <p><em>Loading...</em></p>
+    <Spinner />
 }
 else
 {
@@ -35,7 +35,7 @@ else
 
                                     @if (!string.IsNullOrEmpty(project.Source))
                                     {
-                                        <a href="@project.Source" class="stretched-link">More...</a>
+                                        <a href="@project.Source" class="stretched-link ms-2">More...</a>
                                     }    
                                 </p>
                             </div>
@@ -90,10 +90,6 @@ else
         </table>
     </div>
 }
-
-<footer class="footer mt-auto py-3 bg-body-tertiary">
-    <SocialMedia />
-</footer>
 
 @code {
     private Project[]? _projects;

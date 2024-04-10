@@ -7,7 +7,7 @@
 
 @if (_posts == null)
 {
-    <p><em>Loading...</em></p>
+    <Spinner />
 }
 else
 {
@@ -30,13 +30,9 @@ else
     </div>
 }
 
-<footer class="footer mt-auto py-3 bg-body-tertiary">
-    <SocialMedia />
-</footer>
-
 
 @code {
-    private List<Post>? _posts = Post.Posts;
+    private List<Post>? _posts;
 
     protected override async Task OnInitializedAsync()
     {
