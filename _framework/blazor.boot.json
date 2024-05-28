@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "christian80gabi.github.io",
   "resources": {
-    "hash": "sha256-UCR4+bt+eNKvR6lEK4Q3FoGWTsaFqt+P+MmcPCmW9EE=",
+    "hash": "sha256-tLLdyRLvnYp3GQUVeti8PWffU6cFK+IWezNzmmal8eA=",
     "jsModuleNative": {
       "dotnet.native.8.0.5.k8qrcc28q0.js": "sha256-boyHe+0RMZDkzBKGhsrnXPhPg3oZ6UqJnTUzngJPjNY="
     },
@@ -12,7 +12,7 @@
       "dotnet.native.wasm": "sha256-b3QtgAqvT5FoNyYgoEYsdE4zF5C1Is6lhQ8VEkROor8="
     },
     "assembly": {
-      "christian80gabi.github.io.wasm": "sha256-JADxuOGCVqBIoOCmmrjHrWXe5k2ffqkZdeBs/+6G5Q0=",
+      "christian80gabi.github.io.wasm": "sha256-+mPrLjc3EKqMkbeNB2Ufl8hOsujZkMJ1lR4+XvPFJkI=",
       "Markdig.wasm": "sha256-cS8JmcPXlc2sz4IqP3OraPF6x1CsQzmTCxCGm4/pBa8=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-QbaMXEyCrfQbPtRPVaXra9Z4aWpXFqIFQ4k6P8eURs4=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-ivj7kxN8rrhTm1UV0H7dhsOewu6rhATFU2ZAG/YKLvA=",
