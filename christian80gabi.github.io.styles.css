@@ -128,6 +128,7 @@ main[b-lvwv6vdbmn] {
 
 .sidebar[b-lvwv6vdbmn] {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    /* background-image: linear-gradient(180deg, #2C8A5C 0%, #2ABEA6 70%); */
 }
 
 .top-row[b-lvwv6vdbmn] {
