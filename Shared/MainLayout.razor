@@ -9,6 +9,10 @@
 
     <main>
         <div class="top-row px-4">
+            <a href="mailto:@Email" target="_blank" data-bs-toggle="tooltip"
+               data-bs-placement="bottom" data-bs-title="Email">
+               <img src="icons/envelope-at.svg" alt="Email" height="25" />
+            </a>
             <a href="@LinkedIn" target="_blank" data-bs-toggle="tooltip"
                data-bs-placement="bottom" data-bs-title="LinkedIn">
                 <img src="icons/linkedin.svg" alt="Linkedin" height="25" />
@@ -53,6 +57,7 @@
 </div>
 
 @code {
+    public string? Email { get; set; }
     public string? Behance { get; set; }
     public string? LinkedIn { get; set; }
     public string? GitHub { get; set; }
@@ -83,6 +88,7 @@
             }
             try
             {
+                Email = _socialMedias["EMail"];
                 Behance = _socialMedias["Behance"];
                 LinkedIn = _socialMedias["LinkedIn"];
                 GitHub = _socialMedias["GitHub"];

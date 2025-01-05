@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nFRh8WnozL4kFXDSCEGWVn76JU56HeMkH//bAiSlNBKuebcmQLE/Ul9hyf4iq3f4dwmB3ujsiJCJGFMGmj1Z2g==",
+  "dgSpecHash": "tTa+vVE4Jo8=",
   "success": true,
-  "projectFilePath": "/home/chris/Documents/codespace/christian80gabi.github.io/christian80gabi.github.io.csproj",
+  "projectFilePath": "/home/chris/Documents/christian80gabi.github.io/christian80gabi.github.io.csproj",
   "expectedPackageFiles": [
     "/home/chris/.nuget/packages/bootstrap/5.2.3/bootstrap.5.2.3.nupkg.sha512",
     "/home/chris/.nuget/packages/markdig/0.34.0/markdig.0.34.0.nupkg.sha512",
@@ -30,12 +30,11 @@
     "/home/chris/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "/home/chris/.nuget/packages/microsoft.jsinterop/8.0.0/microsoft.jsinterop.8.0.0.nupkg.sha512",
     "/home/chris/.nuget/packages/microsoft.jsinterop.webassembly/8.0.0/microsoft.jsinterop.webassembly.8.0.0.nupkg.sha512",
-    "/home/chris/.nuget/packages/microsoft.net.illink.tasks/8.0.4/microsoft.net.illink.tasks.8.0.4.nupkg.sha512",
-    "/home/chris/.nuget/packages/microsoft.net.sdk.webassembly.pack/8.0.4/microsoft.net.sdk.webassembly.pack.8.0.4.nupkg.sha512",
+    "/home/chris/.nuget/packages/microsoft.net.illink.tasks/8.0.8/microsoft.net.illink.tasks.8.0.8.nupkg.sha512",
+    "/home/chris/.nuget/packages/microsoft.net.sdk.webassembly.pack/8.0.8/microsoft.net.sdk.webassembly.pack.8.0.8.nupkg.sha512",
     "/home/chris/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
     "/home/chris/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
-    "/home/chris/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
-    "/home/chris/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.4/microsoft.netcore.app.runtime.mono.browser-wasm.8.0.4.nupkg.sha512"
+    "/home/chris/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

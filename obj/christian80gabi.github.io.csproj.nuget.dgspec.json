@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/chris/Documents/codespace/christian80gabi.github.io/christian80gabi.github.io.csproj": {}
+    "/home/chris/Documents/christian80gabi.github.io/christian80gabi.github.io.csproj": {}
   },
   "projects": {
-    "/home/chris/Documents/codespace/christian80gabi.github.io/christian80gabi.github.io.csproj": {
+    "/home/chris/Documents/christian80gabi.github.io/christian80gabi.github.io.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/chris/Documents/codespace/christian80gabi.github.io/christian80gabi.github.io.csproj",
+        "projectUniqueName": "/home/chris/Documents/christian80gabi.github.io/christian80gabi.github.io.csproj",
         "projectName": "christian80gabi.github.io",
-        "projectPath": "/home/chris/Documents/codespace/christian80gabi.github.io/christian80gabi.github.io.csproj",
+        "projectPath": "/home/chris/Documents/christian80gabi.github.io/christian80gabi.github.io.csproj",
         "packagesPath": "/home/chris/.nuget/packages/",
-        "outputPath": "/home/chris/Documents/codespace/christian80gabi.github.io/obj/",
+        "outputPath": "/home/chris/Documents/christian80gabi.github.io/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/chris/.nuget/NuGet/NuGet.Config"
@@ -20,7 +20,7 @@
           "net8.0"
         ],
         "sources": {
-          "/usr/share/dotnet/library-packs": {},
+          "/home/chris/.dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -33,6 +33,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -55,13 +60,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )",
+              "version": "[8.0.8, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )",
+              "version": "[8.0.8, )",
               "autoReferenced": true
             },
             "bootstrap": {
@@ -80,18 +85,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.4, 8.0.4]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/chris/.dotnet/sdk/8.0.402/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
