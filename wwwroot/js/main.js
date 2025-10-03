@@ -17,7 +17,7 @@ AOS.init({
 	});
 
 
-	function fullHeight () {
+	var fullHeight = function () {
 
 		$('.js-fullheight').css('height', $(window).height());
 		$(window).resize(function () {
@@ -28,7 +28,7 @@ AOS.init({
 	fullHeight();
 
 	// loader
-	function loader () {
+	var loader = function () {
 		setTimeout(function () {
 			if ($('#ftco-loader').length > 0) {
 				$('#ftco-loader').removeClass('show');
@@ -37,12 +37,13 @@ AOS.init({
 	};
 	loader();
 
+	// Scrollax
 	$.Scrollax();
 
 
 
 	// Burger Menu
-	function burgerMenu() {
+	var burgerMenu = function () {
 
 		$('body').on('click', '.js-fh5co-nav-toggle', function (event) {
 
@@ -62,7 +63,7 @@ AOS.init({
 	burgerMenu();
 
 
-	function onePageClick() {
+	var onePageClick = function () {
 
 
 		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
@@ -82,7 +83,7 @@ AOS.init({
 	onePageClick();
 
 
-	function carousel () {
+	var carousel = function () {
 		$('.home-slider').owlCarousel({
 			loop: true,
 			autoplay: true,
@@ -201,7 +202,7 @@ AOS.init({
 	counter();
 
 
-	function contentWayPoint () {
+	var contentWayPoint = function () {
 		var i = 0;
 		$('.ftco-animate').waypoint(function (direction) {
 
@@ -438,4 +439,3 @@ $(function () {
 	}
 
 });
-
