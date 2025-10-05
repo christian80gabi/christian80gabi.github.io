@@ -349,60 +349,54 @@ AOS.init({
 
 })(jQuery);
 
-
-
-
-
-
-
 // this makes the height of each page equal to the height of the window
 // $('.page').css('height', $( window ).height());
 
 // scrollspy section
-(function ($) {
-	//variable that will hold the href attr of the links in the menu
-	var sections = [];
-	//variable that stores the id of the section
-	var id = false;
-	//variable for the selection of the anchors in the navbar
-	var $navbara = $('#navi a');
+// (function ($) {
+// 	//variable that will hold the href attr of the links in the menu
+// 	var sections = [];
+// 	//variable that stores the id of the section
+// 	var id = false;
+// 	//variable for the selection of the anchors in the navbar
+// 	var $navbara = $('#navi a');
 
-	$navbara.click(function (e) {
-		//prevent the page from refreshing
-		e.preventDefault();
-		//set the top offset animation and speed
-		$('html, body').animate({
-			scrollTop: $($(this).attr('href')).offset().top - 180
-		}, 500);
-		hash($(this).attr('href'));
-	});
+// 	$navbara.click(function (e) {
+// 		//prevent the page from refreshing
+// 		e.preventDefault();
+// 		//set the top offset animation and speed
+// 		$('html, body').animate({
+// 			scrollTop: $($(this).attr('href')).offset().top - 180
+// 		}, 500);
+// 		hash($(this).attr('href'));
+// 	});
 
 
 
-	//select all the anchors in the navbar one after another
-	$navbara.each(function () {
-		// and adds them in the sections variable
-		sections.push($($(this).attr('href')));
+// 	//select all the anchors in the navbar one after another
+// 	$navbara.each(function () {
+// 		// and adds them in the sections variable
+// 		sections.push($($(this).attr('href')));
 
-	})
-	$(window).scroll(function (e) {
-		// scrollTop retains the value of the scroll top with the reference at the middle of the page
-		var scrollTop = $(this).scrollTop() + ($(window).height() / 2);
-		//cycle through the values in sections array
-		for (var i in sections) {
-			var section = sections[i];
-			//if scrollTop variable is bigger than the top offset of a section in the sections array then 
-			if (scrollTop > section.offset().top) {
-				var scrolled_id = section.attr('id');
-			}
-		}
-		if (scrolled_id !== id) {
-			id = scrolled_id;
-			$($navbara).removeClass('current');
-			$('#navi a[href="#' + id + '"]').addClass('current');
-		}
-	})
-})(jQuery);
+// 	})
+// 	$(window).scroll(function (e) {
+// 		// scrollTop retains the value of the scroll top with the reference at the middle of the page
+// 		var scrollTop = $(this).scrollTop() + ($(window).height() / 2);
+// 		//cycle through the values in sections array
+// 		for (var i in sections) {
+// 			var section = sections[i];
+// 			//if scrollTop variable is bigger than the top offset of a section in the sections array then 
+// 			if (scrollTop > section.offset().top) {
+// 				var scrolled_id = section.attr('id');
+// 			}
+// 		}
+// 		if (scrolled_id !== id) {
+// 			id = scrolled_id;
+// 			$($navbara).removeClass('current');
+// 			$('#navi a[href="#' + id + '"]').addClass('current');
+// 		}
+// 	})
+// })(jQuery);
 
 hash = function (h) {
 	if (history.pushState) {
@@ -439,3 +433,63 @@ $(function () {
 	}
 
 });
+
+
+// export class ScrollHelper {
+// 	async initScrollSpy() {
+// 		const navLinks = document.querySelectorAll("#navi a");
+// 		const sections = document.querySelectorAll(".page");
+
+// 		const observerOptions = {
+// 			root: null,
+// 			rootMargin: "0px",
+// 			// threshold: 0.5 // Trigger when 50% of section is visible
+// 		};
+
+// 		const observer = new IntersectionObserver((entries) => {
+// 			entries.forEach(entry => {
+// 				if (entry.isIntersecting) {
+// 					const id = entry.target.getAttribute("id");
+
+// 					navLinks.forEach(link => {
+// 						link.classList.toggle("current", link.getAttribute("href") === `#${id}`);
+// 					});
+// 				}
+// 			});
+// 		}, observerOptions);
+
+// 		sections.forEach(section => {
+// 			observer.observe(section);
+// 		});
+// 	};
+// }
+
+// export default new ScrollHelper();
+
+
+window.onload = function () {
+	const navLinks = document.querySelectorAll("#navi a");
+	const sections = document.querySelectorAll(".page");
+
+	const observerOptions = {
+		root: null,
+		rootMargin: "0px",
+		// threshold: 0.5 // Trigger when 50% of section is visible
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				const id = entry.target.getAttribute("id");
+
+				navLinks.forEach(link => {
+					link.classList.toggle("current", link.getAttribute("href") === `#${id}`);
+				});
+			}
+		});
+	}, observerOptions);
+
+	sections.forEach(section => {
+		observer.observe(section);
+	});
+};
