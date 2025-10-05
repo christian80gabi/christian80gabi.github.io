@@ -61,13 +61,5 @@
     "markdownContent": "Empty",
     "tags": ["Bloc Note", "Github", "Git"],
     "cover": "assets/svg/undraw_notes.svg"
-  },
-  {
-    "id": 8,
-    "title": "Coming soon",
-    "date": "2024-03-05",
-    "markdownFile": "data/posts/DID.YOU.KNOW.005.md",
-    "markdownContent": "Empty",
-    "cover": "assets/svg/undraw_add_post.svg"
   }
 ]

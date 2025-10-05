@@ -1,0 +1,198 @@
+@using christian80gabi.github.io.Models
+@inject HttpClient Http
+
+
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">About</h2>
+                    <p>A passionate technology enthusiast with a keen interest in staying up-to-date with the latest
+                        developments in the field & a strong believer in continuous learning.</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                        <li>
+                            <a class="text-body-secondary" href="@LinkedIn" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="LinkedIn">
+                                <span class="icon"><i class="bi bi-linkedin"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-body-secondary" href="@GitHub" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="GitHub">
+                                <span class="icon"><i class="bi bi-github"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-body-secondary" href="@Behance" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Behance">
+                                <span class="icon"><i class="bi bi-behance"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-body-secondary" href="@Spotify" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Spotify">
+                                <span class="icon"><i class="bi bi-spotify"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-body-secondary" href="@Twitch" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Twitch">
+                                <span class="icon"><i class="bi bi-twitch"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Links</h2>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="text-decoration-none" href="">
+                                <span class="icon-long-arrow-right me-2"></span> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="#about-section">
+                                <span class="icon-long-arrow-right me-2"></span> About
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="#services-section">
+                                <span class="icon-long-arrow-right me-2"></span> Services
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="/projects">
+                                <span class="icon-long-arrow-right me-2"></span> Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="/contact">
+                                <span class="icon-long-arrow-right me-2"></span> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Services</h2>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="text-decoration-none" href="">
+                                <span class="icon-long-arrow-right me-2"></span> Web Design
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="">
+                                <span class="icon-long-arrow-right me-2"></span> Web Development
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="">
+                                <span class="icon-long-arrow-right me-2"></span> Business Strategy
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="">
+                                <span class="icon-long-arrow-right me-2"></span> Data Analysis
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="">
+                                <span class="icon-long-arrow-right me-2"></span> Graphic Design
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li>
+                                <span class="icon icon-map-marker"></span>
+                                <span class="text">Montréal (QC), Canada</span>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none" href="tel:+15146210809">
+                                    <span class="icon icon-phone"></span>
+                                    <span class="text">@Phone</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none" href="mailto:@Email">
+                                    <span class="icon icon-envelope"></span>
+                                    <span class="text">@Email</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p> 
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" alt="Creative Commons License" style="border-width:0" height="24" /></a> 
+                    Copyright &copy; @Year All rights reserved | Made with <i class="icon-heart text-success" aria-hidden="true"></i> &amp; <a class="text-decoration-none" href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" style="color: blueviolet;" target="_blank">Blazor</a> by <a class="text-decoration-none" href="https://github.com/christian80gabi" target="_blank">christian80gabi</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+@code {
+    // Demonstrates how a parent component can supply parameters
+    private static DateTime _currentYear = DateTime.Now;
+
+    private string? Phone { get; set; }
+    private string? Email { get; set; }
+    private string? Behance { get; set; }
+    private string? LinkedIn { get; set; }
+    private string? GitHub { get; set; }
+    private string? Twitch { get; set; }
+    private string? Spotify { get; set; }
+
+
+    [Parameter]
+    public string? Year { get; set; } = $"{_currentYear.Year}";
+
+
+    private SocialMediaLink[]? _links;
+    private Dictionary<string, string>? _socialMedias;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _links = await Http.GetFromJsonAsync<SocialMediaLink[]>("data/links.json");
+
+        if (_links != null)
+        {
+            _socialMedias = new Dictionary<string, string>();
+            foreach (var link in _links)
+            {
+                try
+                {
+                    _socialMedias.Add(link.Title, link.Link);
+                }
+                catch (ArgumentException)
+                {
+                    Console.WriteLine($"An element with Key = \"{link.Title}\" already exists.");
+                }
+            }
+
+            try
+            {
+                Email = _socialMedias["Email"];
+                Behance = _socialMedias["Behance"];
+                LinkedIn = _socialMedias["LinkedIn"];
+                GitHub = _socialMedias["GitHub"];
+                Phone = _socialMedias["Phone"];
+                Twitch = _socialMedias["Twitch"];
+                Spotify = _socialMedias["Spotify"];
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+    }
+}

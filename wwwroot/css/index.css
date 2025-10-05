@@ -1,0 +1,30 @@
+.marquee-container {
+  width: 100%; /* Full width of the container */
+  overflow: hidden; /* Hide the overflowing content */
+  box-sizing: border-box;
+  position: relative; /* Ensure proper positioning for the sliding div */
+  height: 100px; /* Set a height for the container */
+  background-color: #f0f0f0; /* Optional background for the container */
+}
+
+.sliding-div {
+  display: inline-block;
+  width: 200px; /* Width of the sliding div */
+  height: 100%; /* Match the height of the container */
+  background-color: #4caf50; /* Background color of the sliding div */
+  color: white;
+  text-align: center;
+  line-height: 100px; /* Vertically center the text */
+  font-size: 18px;
+  animation: slide-left 5s linear infinite; /* Animation with infinite loop */
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%); /* Start from outside the right edge */
+  }
+  100% {
+    transform: translateX(-100%); /* Move completely outside the left edge */
+  }
+}
+

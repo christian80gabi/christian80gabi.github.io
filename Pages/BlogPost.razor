@@ -2,16 +2,24 @@
 @using Markdig
 @using christian80gabi.github.io.Models
 
-<div class="container">
-    @if (PostId != null && Post != null)
-    {
-        @RenderMarkdown(Post.MarkdownContent)
-    }
-    else
-    {
-        <Spinner />
-    }
-</div>
+
+<section class="ftco-section">
+    <div class="container">
+        @if (PostId != null && Post != null)
+        {
+            @RenderMarkdown(Post.MarkdownContent)
+        }
+        else
+        {
+            <Spinner />
+        }
+    </div>
+    <div class="container shadow mt-5 pt-5 pb-5 rounded" data-aos="fade-in">
+        <div class="text-center" >
+            <p class="mb-0"><a href="blog-internal" class="btn btn-primary py-3 px-5">More posts</a></p>
+        </div>
+    </div>
+</section>
 
 
 @code {

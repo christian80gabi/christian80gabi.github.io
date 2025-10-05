@@ -3,32 +3,48 @@
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
 
-<h1 class="mb-3">Blog Posts</h1>
+<PageTitle>Blog</PageTitle>
 
-@if (_posts == null)
-{
-    <Spinner />
-}
-else
-{
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        @foreach (var post in _posts)
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+            <div class="col-md-7 heading-section text-center" data-aos="fade-in">
+                <h2 class="mb-4">Blog</h2>
+                <p>Because behind every project, there is a <span class="text-success">story</span> worth telling.</p>
+            </div>
+        </div>
+        @if (_posts == null)
         {
-            <div class="col">
-                <div class="card h-100" @onclick="@(() => NavigateToPost(post))">
-                    <img src="@post.Cover" class="card-img-top m-1" alt="Post-Image">
-                    <div class="card-body">
-                        <h5 class="card-title">@post.Title</h5>
-                        <p class="card-text">@foreach(var tag in @post.Tags) { <span class="badge text-bg-light m-2"><code>@tag</code></span> }</p>
+            <Spinner />
+        }
+        else
+        {
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                @foreach (var post in _posts)
+                {
+                    <div class="col">
+                        <div class="card h-100" @onclick="@(() => NavigateToPost(post))">
+                            <img src="@post.Cover" class="card-img-top m-1" alt="Post-Image">
+                            <div class="card-body">
+                                <h5 class="card-title">@post.Title</h5>
+                                <p class="card-text">@foreach(var tag in @post.Tags) { <span class="badge text-bg-light m-2"><code>@tag</code></span> }</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-body-secondary fst-italic">@post.Date.ToLongDateString()</small>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary fst-italic">@post.Date.ToLongDateString()</small>
-                    </div>
-                </div>
+                }
             </div>
         }
+        <div class="container shadow mt-5 pt-5 pb-5 rounded" data-aos="fade-in">
+            <div class="text-center" >
+                <h2><span>More</span> posts are available for reading</h2>
+                <p class="mb-0"><a href="blog" class="btn btn-primary py-3 px-5">Here</a></p>
+            </div>
+        </div>        
     </div>
-}
+</section>
 
 
 @code {

@@ -1,43 +1,820 @@
 ﻿@page "/"
+
+@using christian80gabi.github.io.Models
+@inject HttpClient Http
 @using System.Globalization
 
 <PageTitle>Index</PageTitle>
 
-<div class="container">
-    <div class="mb-3 lh-1">
-        <div class="display-1 fw-bolder mb-0" style="color: #192c86;">Christian G. NANA</div>
-        <div class="hstack gap-3">
-            <div class="fs-1" style="color: #6f2eea;">-</div>
-            <small class="text-muted">christian80gabi</small>
+<section class="hero-wrap" style="height: 100dvh;">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text justify-content-center align-items-center" style="height: 100dvh;">
+            <div class="col-lg-8 col-md-6 d-flex align-items-center" data-aos="fade-in">
+                <div class="text text-center">
+                    <span class="subheading">Hey! I am</span>
+                    <h1>Christian G. NANA</h1>
+                    <h2>I'm a <span class="txt-rotate" data-period="2000"
+                            data-rotate='[ "Graphic Designer.", "Developer.", "Photographer.", "Consultant.", "Blogger" ]'></span>
+                    </h2>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="mouse">
+        <a href="#about-section" class="mouse-icon">
+            <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
+        </a>
+    </div>
+</section>
 
-    <div>
-        <h3 class="font-monospace text-wrap">
-            Hi, I'm 
-            <span class="type text-wrap">
-                <span>
-                    <span class="text-wrap">an Information Systems Engineer</span>
-                    <span class="text-wrap">a FullStack Web Developer</span>
-                    <span class="text-wrap">a Backend Developer</span>
-                    <span class="text-wrap">a Graphic Designer</span>
-                </span>
-            </span>
-        </h3>
-        <br>
-        <div class="font-monospace mb-4">
-            A passionate technology enthusiast with a keen interest in staying up-to-date with the latest developments
-            in the field & a strong believer in continuous learning.
+<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+    <div class="container">
+        <div class="row d-flex no-gutters">
+            <div class="col-md-6 col-lg-6 d-flex">
+                <div class="img-about img d-flex align-items-stretch">
+                    <div class="overlay"></div>
+                    <div class="img d-flex align-self-stretch align-items-center"
+                        style="background-image:url(images/about.png);">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 pl-md-5 py-5">
+                <div class="row justify-content-start pb-3">
+                    <div class="col-md-12 heading-section" data-animate-effect="fadeInUp">
+                        <h1 class="big">About</h1>
+                        <h2 class="mb-4">About Me</h2>
+                        <p>A passionate technology enthusiast with a keen interest in staying up-to-date with the latest
+                            developments in the field & a strong believer in continuous learning.</p>
+                        <ul class="about-info mt-4 px-md-0 px-2">
+                            <li class="d-flex"><span>Name:</span> <span>Christian « Gabi » NANA</span></li>
+                            <li class="d-flex"><span>Address:</span> <span>Montréal (QC), CA</span></li>
+                            <li class="d-flex"><span>Phone: </span> <span>@Phone</span></li>
+                            <li class="d-flex"><span>Email:</span> <span><a class="text-decoration-none" href="mailto:@Email">@Email</a></span></li>
+                            <li class="d-flex"><span>LinkedIn: </span> <span><a class="text-decoration-none" href="@LinkedIn">in/christian-gabriel.nana</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="counter-wrap d-flex mt-md-3" data-aos="fade-in">
+                    <div class="text">
+                        <p class="mb-4">
+                            @* <span class="number" data-number="120">0</span><span>Project complete</span> *@
+                        </p>
+                        <p><a href="#contact-section" class="btn btn-primary py-3 px-3">Contact Me</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
-    <div class="text-dark bg-opacity-25 p-2 rounded-5 text-center">
+<section class="ftco-section ftco-partner">
+    <div class="container">
+        <div class="row" style="font-size: 4rem;">
+            <div class="col-sm " data-aos="fade-in">
+                <a href="" class="partner text-black disabled" tabindex="-1" role="button" aria-disabled="true"><i class="bi bi-microsoft image-fluid"></i></a>
+            </div>
+            <div class="col-sm " data-aos="fade-in">
+                <a href="" class="partner text-black disabled" tabindex="-1" role="button" aria-disabled="true"><i class="bi bi-google image-fluid"></i></a>
+            </div>
+            <div class="col-sm" data-aos="fade-in">
+                <a href="" class="partner text-black disabled" tabindex="-1" role="button" aria-disabled="true"><i class="bi bi-github image-fluid"></i></a>
+            </div>
+            <div class="col-sm" data-aos="fade-in">
+                <a href="" class="partner text-black disabled" tabindex="-1" role="button" aria-disabled="true"><i class="bi bi-behance image-fluid"></i></a>
+            </div>
+            <div class="col-sm" data-aos="fade-in">
+                <a href="" class="partner text-black disabled" tabindex="-1" role="button" aria-disabled="true"><i class="bi bi-android image-fluid"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <figure class="figure" style="max-height: fit-content;">
-            <img src="images/avatar.png" class="figure-img img-fluid rounded" alt="Avatar"
-                style="max-width: 100%; object-fit: cover; height: calc(100vh - 500px);" />
-            <figcaption class="figure-caption"></figcaption>
-        </figure>
+<section class="ftco-section ftco-no-pb goto-here" id="resume-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <nav id="navi">
+                    <ul>
+                        <li><a href="#page-1">Experience</a></li>
+                        <li><a href="#page-2">Education</a></li>
+                        <li><a href="#page-3">Skills</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-9">
+                <div id="page-1" class="page one">
+                    <h2 class="heading">Experience</h2>
+                    <div class="resume-wrap d-flex" data-aos="fade-in">
+                        <div class="icon d-flex align-items-center justify-content-center m-2">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2023-Present</span>
+                            <h2>Web Developer</h2>
+                            <span class="position">Self-employee</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex" data-aos="fade-in">
+                        <div class="icon d-flex align-items-center justify-content-center m-2">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2023</span>
+                            <h2>WordPress Developer</h2>
+                            <span class="position">Eloh Inc.</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex" data-aos="fade-in">
+                        <div class="icon d-flex align-items-center justify-content-center m-2">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2021-2025</span>
+                            <h2>Information System Analyst-Developer</h2>
+                            <span class="position">IDM Systems</span>
+                            <p>Oversaw the development of CRM, HRM, and reporting systems, driving product innovation
+                                and ensuring seamless performance. Skilled in Django, PostgreSQL, Azure DevOps, Linux,
+                                and Microsoft 365 for robust, scalable solutions.</p>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex" data-aos="fade-in">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2021</span>
+                            <h2>Information System Engineer</h2>
+                            <span class="position">IDM Systems</span>
+                            <p>Developed an HR module integrated into company’s ERP (Django, PostgreSQL, Bootstrap),
+                                enhancing operational efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex" data-aos="fade-in">
+                        <div class="icon d-flex align-items-center justify-content-center m-2">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2020</span>
+                            <h2>Java Software Developer</h2>
+                            <span class="position">Université Internationale de Tunis</span>
+                            <p>Participant as Java Software Developer at Summer Challenge <b>SAP Next-Gen '20</b> at
+                                International University of Tunis partnered with <b>Tunisian Customs</b>.</p>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex" data-aos="fade-in">
+                        <div class="icon d-flex align-items-center justify-content-center m-2">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2019</span>
+                            <h2>Software Developer</h2>
+                            <span class="position">Tunisia Fleet Management (TFM)</span>
+                            <p>Co-developed a cross-platform app (Angular, PHP, MySQL, Bootstrap) to digitalize accident
+                                reports.</p>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex" data-aos="fade-in">
+                        <div class="icon d-flex align-items-center justify-content-center m-2">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2018</span>
+                            <h2>UI/UX Designer</h2>
+                            <span class="position">Université Internationale de Tunis</span>
+                            <p>Winner participant as SAP-FIORI Developer at Summer Challenge <b>SAP Next-Gen '18</b> at
+                                International University of Tunis partnered with <b>AYMAX</b>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page-2" class="page two">
+                    <h2 class="heading">Education</h2>
+                    <div class="resume-wrap d-flex" data-aos="fade-in">
+                        <div class="icon d-flex align-items-center justify-content-center m-2">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2024</span>
+                            <h2>All In Africa Open Source</h2>
+                            <span class="position">All In Open Source</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex" data-aos="fade-in">
+                        <div class="icon d-flex align-items-center justify-content-center m-2">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2019-2021</span>
+                            <h2>Master of Science in Information Systems Engineering</h2>
+                            <span class="position">Université Internationale de Tunis</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex" data-aos="fade-in">
+                        <div class="icon d-flex align-items-center justify-content-center m-2">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2020</span>
+                            <h2>Graphic Design</h2>
+                            <span class="position">Colombia University</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex" data-aos="fade-in">
+                        <div class="icon d-flex align-items-center justify-content-center m-2">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2016-2019</span>
+                            <h2>Bachelor of Science in Information Technology</h2>
+                            <span class="position">Université Internationale de Tunis</span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page-3" class="page three">
+                    <h2 class="heading">Skills</h2>
+                    <div class="row progress-circle mb-5">
+                        <div class="col-lg-4 mb-4">
+                            <div class="bg-white rounded-lg shadow p-4">
+                                <h2 class="h5 font-weight-bold text-center mb-4">ERP</h2>
+
+                                <div class="progress mx-auto" data-value='90' data-aos="fade-in" data-aos-once="true">
+                                    <span class="progress-left">
+                                        <span class="progress-bar border-success"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar border-success"></span>
+                                    </span>
+                                    <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center"
+                                        data-aos="fade-in">
+                                        <div class="h2 font-weight-bold count" data-target="90">90<sup
+                                                class="small">%</sup></div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row text-center mt-4">
+                                    <div class="col-6 border-right">
+                                        <div class="h4 font-weight-bold mb-0">30%</div><span
+                                            class="small text-gray">SAP</span>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="h4 font-weight-bold mb-0">50%</div><span class="small text-gray">Dynamics 365</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4">
+                            <div class="bg-white rounded-lg shadow p-4">
+                                <h2 class="h5 font-weight-bold text-center mb-4">Web Development</h2>
+
+                                <div class="progress mx-auto" data-value='80' data-aos="fade-in" data-aos-once="true">
+                                    <span class="progress-left">
+                                        <span class="progress-bar border-success"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar border-success"></span>
+                                    </span>
+                                    <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center" data-aos="fade-in">
+                                        <div class="h2 font-weight-bold count" data-target="80">80<sup class="small">%</sup></div>
+                                    </div>
+                                </div>
+
+                                <div class="row text-center mt-4">
+                                    <div class="col-4 border-right">
+                                        <div class="h4 font-weight-bold mb-0">30%</div><span
+                                            class="small text-gray">Django</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="h4 font-weight-bold mb-0">25%</div><span
+                                            class="small text-gray">React/Express</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="h4 font-weight-bold mb-0">20%</div><span
+                                            class="small text-gray">Java</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4">
+                            <div class="bg-white rounded-lg shadow p-4">
+                                <h2 class="h5 font-weight-bold text-center mb-4">Design</h2>
+
+                                <div class="progress mx-auto" data-value='75' data-aos="fade-in" data-aos-once="true">
+                                    <span class="progress-left">
+                                        <span class="progress-bar border-success"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar border-success"></span>
+                                    </span>
+                                    <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center"
+                                        data-aos="fade-in">
+                                        <div class="h2 font-weight-bold count" data-target="75">75<sup
+                                                class="small">%</sup></div>
+                                    </div>
+                                </div>
+
+                                <div class="row text-center mt-4">
+                                    <div class="col-6 border-right">
+                                        <div class="h4 font-weight-bold mb-0">48%</div><span
+                                            class="small text-gray">Web</span>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="h4 font-weight-bold mb-0">50%</div><span
+                                            class="small text-gray">Graphic</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 animate-box">
+                            <div class="progress-wrap" data-aos="fade-in">
+                                <h3>Python</h3>
+                                <div class="progress">
+                                    <div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                        <span>90%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 animate-box">
+                            <div class="progress-wrap" data-aos="fade-in">
+                                <h3>Bootstrap</h3>
+                                <div class="progress">
+                                    <div class="progress-bar color-2" role="progressbar" aria-valuenow="85"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                        <span>85%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 animate-box">
+                            <div class="progress-wrap" data-aos="fade-in">
+                                <h3>HTML5</h3>
+                                <div class="progress">
+                                    <div class="progress-bar color-3" role="progressbar" aria-valuenow="95"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                        <span>95%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 animate-box">
+                            <div class="progress-wrap" data-aos="fade-in">
+                                <h3>Docker</h3>
+                                <div class="progress">
+                                    <div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                        <span>90%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 animate-box">
+                            <div class="progress-wrap" data-aos="fade-in">
+                                <h3>WordPress</h3>
+                                <div class="progress">
+                                    <div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                        <span>70%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 animate-box">
+                            <div class="progress-wrap" data-aos="fade-in">
+                                <h3>Microsoft 365</h3>
+                                <div class="progress">
+                                    <div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                        <span>80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section" id="services-section">
+    <div class="container-fluid px-md-5">
+        <div class="row justify-content-center py-5 mt-5">
+            <div class="col-md-12 heading-section text-center" data-aos="fade-in">
+                <h1 class="big big-2">Services</h1>
+                <h2 class="mb-4">Services</h2>
+                <p>Where creativity meets functionality, and every detail matters.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center d-flex" data-aos="fade-in">
+                <a href="" class="services-1 shadow text-decoration-none">
+                    <span class="icon">
+                        <i class="flaticon-analysis"></i>
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Web Design</h3>
+                        <p>Designing digital spaces that feel alive, where every pixel tells your story.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex" data-aos="fade-in">
+                <a href="" class="services-1 shadow text-decoration-none">
+                    <span class="icon">
+                        <i class="flaticon-flasks"></i>
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Photography</h3>
+                        <p>Capturing the soul behind every moment, one frame at a time.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex" data-aos="fade-in">
+                <a href="" class="services-1 shadow text-decoration-none">
+                    <span class="icon">
+                        <i class="flaticon-ideas"></i>
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Web Developer</h3>
+                        <p>Turning ideas into seamless digital worlds that simply <i>work</i>.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 text-center d-flex" data-aos="fade-in">
+                <a href="" class="services-1 shadow text-decoration-none">
+                    <span class="icon">
+                        <i class="flaticon-innovation"></i>
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">App Developing</h3>
+                        <p>Breathing life into apps that people love to use every day.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex" data-aos="fade-in">
+                <a href="" class="services-1 shadow text-decoration-none">
+                    <span class="icon">
+                        <i class="flaticon-ux-design"></i>
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Branding</h3>
+                        <p>Crafting stories that make people <i>feel</i>, remember, and believe in your brand.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex" data-aos="fade-in">
+                <a href="" class="services-1 shadow text-decoration-none">
+                    <span class="icon">
+                        <i class="flaticon-idea"></i>
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Product Strategy</h3>
+                        <p>Bringing clarity and vision to complex systems, so your business flows effortlessly.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section" id="section-tools">
+    <div class="container-fluid text-center">
+        <div class="row justify-content-evenly m-3">
+
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-python" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">Python</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-java" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">Java</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-bootstrap" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">Bootstrap</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-docker" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">Docker</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-sap" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">SAP</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-tr-react" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">React</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-rr-cloud" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">Could</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-mysql" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">MySQL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-node-js" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">NodeJS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-postgre" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-evenly m-3">
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-wordpress" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">WordPress</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-html5" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">HTML5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-github" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">GitHub</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-figma" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">Figma</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-adobe" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">Adobe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-behance" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">Behance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-centos" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">CentOS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-ubuntu" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">Ubuntu</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-js" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">JavaScript</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-oracle" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">Oracle</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <i class="fi fi-brands-xd" style="font-size: 3rem"></i>
+                    <div class="card-body">
+                        <p class="card-text">XD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center" data-aos="fade-in">
+                <h1 class="big big-2">Contact</h1>
+                <h2 class="mb-4">Contact Me</h2>
+                <p>I am always open to new challenges and opportunities. So, let's start by saying <span class="text-success">Hi</span>!</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow p-4 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-5">Get in touch</h5>
+                            <div class="card-text">
+                                <dl class="row">
+                                    <dt class="col-sm-3"><i class="bi bi-yin-yang me-2" style="font-size: 1rem;"></i> Name:</dt>
+                                    <dd class="col-sm-9">Christian <i>« Gabi »</i> NANA</dd>
+
+                                    <dt class="col-sm-3"><i class="bi bi-signpost-split-fill me-2" style="font-size: 1rem;"></i> Address:</dt>
+                                    <dd class="col-sm-9">Montréal (QC), CA</dd>
+
+                                    <dt class="col-sm-3"><i class="bi bi-telephone-fill me-2" style="font-size: 1rem;"></i> Phone:</dt>
+                                    <dd class="col-sm-9"><a class="text-decoration-none" href="tel:@Phone">@Phone</a></dd>
+                                    
+                                    <dt class="col-sm-3"><i class="bi bi-envelope-at-fill me-2" style="font-size: 1rem;"></i> Email:</dt>
+                                    <dd class="col-sm-9"><a class="text-decoration-none" href="mailto:@Email">@Email</a></dd>
+                                    
+                                    <dt class="col-sm-3"><i class="bi bi-linkedin me-2" style="font-size: 1rem;"></i> LinkedIn:</dt>
+                                    <dd class="col-sm-9"><a class="text-decoration-none" href="@LinkedIn">in/christian-gabriel.nana</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="container-sm shadow p-4 h-100" data-aos="fade-in">
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="form-name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="form-name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="form-email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="form-email">
+                            </div>
+                            <div class="col-12">
+                                <label for="form-subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="form-subject" placeholder="Subject">
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" id="form-message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary py-3 px-5">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
-</div>
+</section>
+
+@inject IJSRuntime JS
+@implements IAsyncDisposable
+
+
+@code {
+    private IJSObjectReference? module;
+    private Lazy<IJSObjectReference> MainModule = new();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/components/index.js");
+            if (module != null)
+            {
+                await module.InvokeVoidAsync("initScrollSpy");
+                @* await module.InvokeVoidAsync("textRotation"); *@
+            }
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (module != null)
+        {
+            await module.DisposeAsync();
+        }
+    }
+}
+
+@code {
+    private string? Phone { get; set; }
+    private string? Email { get; set; }
+    private string? Behance { get; set; }
+    private string? LinkedIn { get; set; }
+    private string? GitHub { get; set; }
+    private string? Twitch { get; set; }
+    private string? Spotify { get; set; }
+
+    private SocialMediaLink[]? _links;
+    private Dictionary<string, string>? _socialMedias;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _links = await Http.GetFromJsonAsync<SocialMediaLink[]>("data/links.json");
+
+        if (_links != null)
+        {
+            _socialMedias = new Dictionary<string, string>();
+            foreach (var link in _links)
+            {
+                try
+                {
+                    _socialMedias.Add(link.Title, link.Link);
+                }
+                catch (ArgumentException)
+                {
+                    Console.WriteLine($"An element with Key = \"{link.Title}\" already exists.");
+                }
+            }
+
+            try
+            {
+                Email = _socialMedias["Email"];
+                Behance = _socialMedias["Behance"];
+                LinkedIn = _socialMedias["LinkedIn"];
+                GitHub = _socialMedias["GitHub"];
+                Phone = _socialMedias["Phone"];
+                Twitch = _socialMedias["Twitch"];
+                Spotify = _socialMedias["Spotify"];
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+    }
+}

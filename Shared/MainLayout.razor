@@ -3,103 +3,10 @@
 @inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    <NavMenu />
 
     <main>
-        <div class="top-row px-4">
-            <a href="mailto:@Email" target="_blank" data-bs-toggle="tooltip"
-               data-bs-placement="bottom" data-bs-title="Email">
-               <img src="icons/envelope-at.svg" alt="Email" height="25" />
-            </a>
-            <a href="@LinkedIn" target="_blank" data-bs-toggle="tooltip"
-               data-bs-placement="bottom" data-bs-title="LinkedIn">
-                <img src="icons/linkedin.svg" alt="Linkedin" height="25" />
-            </a>
-            <a href="@Behance" target="_blank" data-bs-toggle="tooltip"
-               data-bs-placement="bottom" data-bs-title="Behance">
-                <img src="icons/behance.svg" alt="Behance" height="25" />
-            </a>
-            <a href="@GitHub" target="_blank" data-bs-toggle="tooltip"
-               data-bs-placement="bottom" data-bs-title="GitHub">
-                <img src="icons/github.svg" alt="GitHub" height="25" />
-            </a>
-            <a href="@Instagram" target="_blank" data-bs-toggle="tooltip"
-               data-bs-placement="bottom" data-bs-title="Instagram">
-                <img src="icons/instagram.svg" alt="Instagram" height="25" />
-            </a>
-            <a href="@Facebook" target="_blank" data-bs-toggle="tooltip"
-               data-bs-placement="bottom" data-bs-title="Facebook">
-                <img src="icons/facebook.svg" height="25" alt="Facebook">
-            </a>
-            <a href="@Twitter" target="_blank" data-bs-toggle="tooltip"
-               data-bs-placement="bottom" data-bs-title="Twitter">
-                <img src="icons/twitter.svg" alt="Twitter" height="25" />
-                @* <svg width="30" height="30" fill="currentColor">
-                <use href="icons/bootstrap-icons.svg#twitter"></use>
-                </svg> *@
-            </a>
-            <a href="#" class="text-decoration-none pe-none">|</a>
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">
-                Made with Blazor <img src="icon-192.png" height="20" />
-            </a>
-        </div>
-
-        <article class="content px-4 d-flex flex-column" style="min-height: 100dvh">
-            @Body
-
-            <footer class="footer mt-auto py-3 bg-body-tertiary">
-                <SocialMedia />
-            </footer>
-        </article>
+        @Body
+        <Footer />
     </main>
 </div>
-
-@code {
-    public string? Email { get; set; }
-    public string? Behance { get; set; }
-    public string? LinkedIn { get; set; }
-    public string? GitHub { get; set; }
-    public string? Twitter { get; set; }
-    public string? Instagram { get; set; }
-    public string? Facebook { get; set; }
-
-    private SocialMediaLink[]? _links;
-    private Dictionary<string, string>? _socialMedias;
-
-    protected override async Task OnInitializedAsync()
-    {
-        _links = await Http.GetFromJsonAsync<SocialMediaLink[]>("data/links.json");
-
-        if (_links != null)
-        {
-            _socialMedias = new Dictionary<string, string>();
-            foreach (var link in _links)
-            {
-                try
-                {
-                    _socialMedias.Add(link.Title, link.Link);
-                }
-                catch (ArgumentException)
-                {
-                    Console.WriteLine($"An element with Key = \"{link.Title}\" already exists.");
-                }
-            }
-            try
-            {
-                Email = _socialMedias["EMail"];
-                Behance = _socialMedias["Behance"];
-                LinkedIn = _socialMedias["LinkedIn"];
-                GitHub = _socialMedias["GitHub"];
-                Twitter = _socialMedias["Twitter"];
-                Instagram = _socialMedias["Instagram"];
-                Facebook = _socialMedias["Facebook"];
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-        }
-    }
-}
