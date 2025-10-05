@@ -1,14 +1,6 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 @import url("bootstrap-icons/bootstrap-icons.min.css");
 
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Regular.woff2') format('woff'),
-        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-        url('fonts/JetBrainsMono-Regular.ttf') format('truetype');
-    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}
-
 .content {
     padding-top: 1.1rem;
 }
@@ -89,7 +81,7 @@
 
 html,
 body {
-    font-family: "Poppins", 'JetBrains Mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Poppins", 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background: #fff;
     font-size: 16px;
     line-height: 1.8;
