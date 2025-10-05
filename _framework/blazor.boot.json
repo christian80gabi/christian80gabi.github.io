@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "christian80gabi.github.io",
   "resources": {
-    "hash": "sha256-wTLQQ06QPasLxHflbLrRHN9m4YnFS1rJXuP9juggxRA=",
+    "hash": "sha256-OR1D4U42l804i2sgbUZmoY7kJlcmiU/qj18LHjgZPF8=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-D0bzod5lwwSzPR43JC8TTCcZKw+3jIHOk8CZFCRj5is="
     },
@@ -47,7 +47,7 @@
       "System.Text.RegularExpressions.wasm": "sha256-SW5L77HZP6F1seYrYKk/8bCw55JedaRD8wTtEYIeaPY=",
       "System.Threading.wasm": "sha256-FH1BckRWyZCbzprAEwUmOVhmxmzXB93sS8lhhcLn7iQ=",
       "System.Private.CoreLib.wasm": "sha256-gIsv4gOHbwFGbnacj0bdooGNS1R3TGrhHypJtOfKgaM=",
-      "christian80gabi.github.io.wasm": "sha256-n9hSllK/W8+eylnR8v9mJBQyjTrr3WiaOf+QKvoGe3U="
+      "christian80gabi.github.io.wasm": "sha256-lUjq+fjJwUG7Wp7JwLdT8B1vwrXORgCVRKCnQL69pzc="
     }
   },
   "cacheBootResources": true,
