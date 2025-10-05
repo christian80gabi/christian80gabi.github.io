@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "christian80gabi.github.io",
   "resources": {
-    "hash": "sha256-Awk1Hr1QqiPVHlr/gtw6D6RB/BZhfcGcG350tjjjO6Q=",
+    "hash": "sha256-wTLQQ06QPasLxHflbLrRHN9m4YnFS1rJXuP9juggxRA=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-D0bzod5lwwSzPR43JC8TTCcZKw+3jIHOk8CZFCRj5is="
     },
@@ -41,13 +41,13 @@
       "System.Private.Uri.wasm": "sha256-+5bKsEBwu29CCb4r0rpH36TdSwAqBWHAoj0Gm8xK3ZA=",
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-VobV4s6waaPCxdGb/7K0/4/r409Bna15Y0gB0Uvt2e8=",
       "System.Runtime.InteropServices.wasm": "sha256-1Ge2N6Lj5+abRhuCYqbK9e3b9kzUTkEb/9cmgNdxDvw=",
-      "System.Runtime.wasm": "sha256-URCB5rWGLlZxCKBi0wPq10ZtjHPfxCFU6hQCPyraSjQ=",
+      "System.Runtime.wasm": "sha256-ldTsVSnRZWCQkrs6XLOCSG1HAOsh3xz10DjcT3Lfu5U=",
       "System.Text.Encodings.Web.wasm": "sha256-VOg+zguG96y73fEMapV6IIhp1erfALWn3Bk/JJpuciY=",
       "System.Text.Json.wasm": "sha256-+vKG8zQyz8jH42iI5pcSXzMft8YLPaMFKbMXsMiDxfk=",
       "System.Text.RegularExpressions.wasm": "sha256-SW5L77HZP6F1seYrYKk/8bCw55JedaRD8wTtEYIeaPY=",
       "System.Threading.wasm": "sha256-FH1BckRWyZCbzprAEwUmOVhmxmzXB93sS8lhhcLn7iQ=",
-      "System.Private.CoreLib.wasm": "sha256-aTLZBLScajDmHI+NW9mKJDtsmTNc6XmPRGlhx29UDbw=",
-      "christian80gabi.github.io.wasm": "sha256-2WGjYC4cpPGWHNl/Q/0EvmBL5QhkJdriXYGPLNIZuXM="
+      "System.Private.CoreLib.wasm": "sha256-gIsv4gOHbwFGbnacj0bdooGNS1R3TGrhHypJtOfKgaM=",
+      "christian80gabi.github.io.wasm": "sha256-n9hSllK/W8+eylnR8v9mJBQyjTrr3WiaOf+QKvoGe3U="
     }
   },
   "cacheBootResources": true,
