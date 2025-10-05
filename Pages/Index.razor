@@ -752,10 +752,10 @@
     {
         if (firstRender)
         {
-            module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/components/index.js");
+            module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/Components/Index.js");
             if (module != null)
             {
-                await module.InvokeVoidAsync("initScrollSpy");
+                await module.InvokeVoidAsync("default.initScrollSpy");
             }
         }
     }
