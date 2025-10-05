@@ -4,98 +4,105 @@
 
 <PageTitle>Projects</PageTitle>
 
-<h1>Projects</h1>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+            <div class="col-md-7 heading-section text-center" data-aos="fade-in">
+                <h2 class="mb-4">Projects</h2>
+                <p>This a list of few project I'm <span class="text-success">working on</span> or <span class="text-success">did</span>. I am always open to new challenges and opportunities or just for a check-in. So, don't worry to <span class="text-success">reach out</span>!</p>
+            </div>
+        </div>
 
-<p>This a list of few project I'm <code>working on</code> or <code>did</code>. I am always open to new challenges and opportunities or just for a check-in. So, don't worry to reach out!</p>
-
-@if (_projects == null)
-{
-    <Spinner />
-}
-else
-{
-    <div class="row row-cols-1 row-cols-md-2 g-4 mb-2">
-        @foreach (var project in _projects)
+        @if (_projects == null)
         {
-            <div class="col">
-                <div class="card h-100">
-                    <div class="row g-0">
-                        <div class="col-md-4 p-1">
-                            <img src="@project.Cover" class="img-fluid rounded-start" alt="Project-Post">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <p class="card-text"><small class="text-body-secondary fst-italic">Started on @project.Date.ToLongDateString()</small></p>
-                                <h5 class="card-title">{ <span style="color: #6f2eea;"> @project.Scope</span> } @project.Title</h5>
-                                <p class="card-text">
-                                    @foreach(var tag in @project.Tags) { <span class="badge text-bg-light m-2"><code>@tag</code></span> }
-                                </p>
-                                <p class="card-text">
-                                    @project.Summary
+            <Spinner />
+        }
+        else
+        {
+            <div class="row row-cols-1 row-cols-md-2 g-4 mb-2">
+                @foreach (var project in _projects)
+                {
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="row g-0">
+                                <div class="col-md-4 p-1">
+                                    <img src="@project.Cover" class="img-fluid rounded-start" alt="Project-Post">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <p class="card-text"><small class="text-body-secondary fst-italic">Started on @project.Date.ToLongDateString()</small></p>
+                                        <h5 class="card-title">{ <span style="color: #137a3c;"> @project.Scope</span> } @project.Title</h5>
+                                        <p class="card-text">
+                                            @foreach(var tag in @project.Tags) { <span class="badge text-bg-light m-2"><code>@tag</code></span> }
+                                        </p>
+                                        <p class="card-text">
+                                            @project.Summary
 
-                                    @if (!string.IsNullOrEmpty(project.Source))
-                                    {
-                                        <a href="@project.Source" class="stretched-link ms-2">More...</a>
-                                    }    
-                                </p>
+                                            @if (!string.IsNullOrEmpty(project.Source))
+                                            {
+                                                <a href="@project.Source" class="stretched-link ms-2">More...</a>
+                                            }    
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                }
+            </div>
+            <br />
+            
+            <hr />
+
+            <br />
+            <div class="table-responsive mt-4">
+                <table class="table table-hover">
+                    <caption>List of projects</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Scope</th>
+                            <th scope="col">Summary</th>
+                            <th scope="col">Source</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        @foreach (var project in _projects)
+                        {
+                            <tr>
+                                <td class="font-monospace">@project.Date.ToShortDateString()</td>
+                                <th scope="row">@project.Title</th>
+                                <td>
+                                    <strong class="@(project.Status.Equals("Done")? "text-success" : project.Status.Equals("In Progress")? "text-primary" : "text-secondary")">@project.Status</strong>
+                                </td>
+                                <td>@project.Scope</td>
+                                <td>@project.Summary</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(project.Source))
+                                    {
+                                        <a href="@project.Source" class="fw-bold text-decoration-none">GoTo  ></a>
+                                    } 
+                                    else
+                                    {
+                                        <em>Not provided!</em>
+                                    }
+                                </td >
+                            </tr>
+                        }
+                    </tbody>
+                </table>
             </div>
         }
+
+        @code {
+            private Project[]? _projects;
+
+            protected override async Task OnInitializedAsync()
+            {
+                _projects = await Http.GetFromJsonAsync<Project[]>("data/projects.json");
+            }
+        }
     </div>
-    <br />
-    
-    <hr />
-
-    <br />
-    <div class="table-responsive mt-4">
-        <table class="table table-hover">
-            <caption>List of projects</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Date</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Scope</th>
-                    <th scope="col">Summary</th>
-                    <th scope="col">Source</th>
-                </tr>
-            </thead>
-            <tbody class="table-group-divider">
-                @foreach (var project in _projects)
-                {
-                    <tr>
-                        <td class="font-monospace">@project.Date.ToShortDateString()</td>
-                        <th scope="row">@project.Title</th>
-                        <td>
-                            <strong class="@(project.Status.Equals("Done")? "text-success" : project.Status.Equals("In Progress")? "text-primary" : "text-secondary")">@project.Status</strong>
-                        </td>
-                        <td>@project.Scope</td>
-                        <td>@project.Summary</td>
-                        <td>
-                            @if (!string.IsNullOrEmpty(project.Source))
-                            {
-                                <a href="@project.Source" class="fw-bold text-decoration-none">GoTo  ></a>
-                            } 
-                            else
-                            {
-                                <em>Not provided!</em>
-                            }
-                        </td >
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-}
-
-@code {
-    private Project[]? _projects;
-
-    protected override async Task OnInitializedAsync()
-    {
-        _projects = await Http.GetFromJsonAsync<Project[]>("data/projects.json");
-    }
-}
+</section>
