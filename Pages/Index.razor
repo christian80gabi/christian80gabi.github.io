@@ -740,35 +740,6 @@
     </div>
 </section>
 
-@* @inject IJSRuntime JS
-@implements IAsyncDisposable
-
-
-@code {
-    private IJSObjectReference? module;
-    private Lazy<IJSObjectReference> MainModule = new();
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/Components/Index.js");
-            if (module != null)
-            {
-                await module.InvokeVoidAsync("default.initScrollSpy");
-            }
-        }
-    }
-
-    public async ValueTask DisposeAsync()
-    {
-        if (module != null)
-        {
-            await module.DisposeAsync();
-        }
-    }
-} *@
-
 @code {
     private string? Phone { get; set; }
     private string? Email { get; set; }
